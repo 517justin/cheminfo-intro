@@ -4,3 +4,4 @@ book/.venv/
 **/__pycache__/
 .DS_Store
 book/review/
+book/llms.txt

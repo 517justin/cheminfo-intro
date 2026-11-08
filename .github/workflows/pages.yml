@@ -1,0 +1,54 @@
+name: 建置並發布書稿
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.20
+
+      - name: 產生 llms.txt
+        run: python3 tools/build_llms_txt.py
+
+      - name: 渲染書稿
+        run: quarto render book
+
+      - name: 檢查輸出
+        run: |
+          test -f book/_book/index.html
+          test -f book/_book/sitemap.xml
+          test -f book/_book/llms.txt
+          echo "頁數：$(find book/_book -name '*.html' | wc -l)"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: book/_book
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

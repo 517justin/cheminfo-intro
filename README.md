@@ -2,6 +2,8 @@
 
 目前收錄第 0 至 15 章，共 93 節與 83 份 notebook。
 
+線上閱讀：https://517justin.github.io/cheminfo-intro/
+
 **驗證進度**：所有 notebook 都已在本機（Python 3.12.13）執行通過；在 Colab 實機驗證則在進行中，目前完成第 5 章的 5.2、5.3、5.4、5.6、5.7，其中 5.5 計算量大，仍在調整，其餘小節陸續補上。遇到問題歡迎開 issue。
 
 - [第 0 章　前言](book/chapters/ch00/index.qmd)
