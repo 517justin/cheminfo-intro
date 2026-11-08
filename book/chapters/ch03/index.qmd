@@ -1,0 +1,34 @@
+---
+description: "從化合物身分、活性與結構資料查起，核對量測條件、清理規則及公開資料的涵蓋範圍，附六份獨立 notebook。"
+---
+
+# 第 3 章　化學資料庫 {#sec-chemical-databases .unnumbered}
+
+自己的實驗資料總是有限，公開資料庫可以幫我們補上一大批真實的分子和量測紀錄。不過，每個資料庫收錄的東西不太一樣：有的以化學結構為主，有的整理生物活性和測試方法，有的提供買得到的候選化合物。使用前先想清楚要回答什麼問題，才知道該去哪裡找，也才知道找到的資料能不能直接用。
+
+這一章介紹 PubChem、ChEMBL、ZINC 等常用資料庫，以及本書建模時常用的 MoleculeNet 資料集。除了怎麼下載，我們也會花不少篇幅談資料清理：同一個分子是否重複出現、單位是否一致、「IC50 > 10 μM」這種帶不等號的數值該怎麼處理，還有公開資料本身的偏差。這些檢查會直接影響模型學到什麼。第 10 章評估模型、第 13 章整理自己的實驗紀錄時，都會再用到同樣的原則。
+
+## 閱讀順序
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [PubChem 與 PubChemPy](03-01-pubchem.qmd) → [ChEMBL 與活性資料](03-02-chembl.qmd) | 查到的名稱代表哪種結構？同一分子的多筆 IC50 是否真的量了同一件事？ |
+| [其他常用資料庫](03-03-chemical-databases.qmd) → [MoleculeNet 與 DeepChem](03-04-moleculenet.qmd) | 已知活性與可取得的候選化合物，分別如何用 ChEMBL、ZINC 查找？化學分類、複合體與物性又該去哪裡找？整理成模型用的資料集後，還保留哪些資訊？ |
+| [資料清理常見陷阱](03-05-data-cleaning.qmd) → [公開資料的偏差](03-06-public-data-bias.qmd) | 單位、不等號與重複紀錄要怎麼處理？下載的資料代表誰，又有哪些結果無從得知？ |
+
+## 執行環境與下載
+
+六份 notebook 彼此獨立，每一份都可以從頭執行，一般的 CPU 就夠用，環境和前兩章相同（Colab 2026.07 的 Python 3.12.13）。3.1 多裝了一個查詢 PubChem 用的套件 PubChemPy 1.0.5，其餘套件的版本都和前面一樣。
+
+3.4 透過 DeepChem 讀取 ESOL，第一次載入時需要連上網路。其餘五份 notebook 都附了一份**快照**：我們事先向各資料庫查好資料，把當時的回應存在 notebook 裡，所以預設不必連線，就能得到和書中相同的結果。如果想查最新的資料，每份 notebook 也都有開關可以改成即時查詢；不過資料庫會持續修訂，查到的結果可能和書中不同，記得把查詢條件和日期一起記下來。
+
+| 小節 | Notebook |
+|---|---|
+| 3.1 PubChem 與 PubChemPy | [下載 .ipynb](../../notebooks/ch03/03-01-pubchem.ipynb) |
+| 3.2 ChEMBL 與活性資料 | [下載 .ipynb](../../notebooks/ch03/03-02-chembl.ipynb) |
+| 3.3 其他常用資料庫 | [下載 .ipynb](../../notebooks/ch03/03-03-chemical-databases.ipynb) |
+| 3.4 MoleculeNet 與 DeepChem | [下載 .ipynb](../../notebooks/ch03/03-04-moleculenet.ipynb) |
+| 3.5 資料清理常見陷阱 | [下載 .ipynb](../../notebooks/ch03/03-05-data-cleaning.ipynb) |
+| 3.6 公開資料的偏差 | [下載 .ipynb](../../notebooks/ch03/03-06-public-data-bias.ipynb) |
+
+[章末綜合練習](exercises.qmd) 將查詢、量測與清理決定整理成能回查來源的資料表。

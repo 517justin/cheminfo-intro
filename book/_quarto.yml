@@ -1,0 +1,184 @@
+project:
+  type: book
+  output-dir: _book
+  resources:
+    - notebooks/ch00/*.ipynb
+    - notebooks/ch01/*.ipynb
+    - notebooks/ch02/*.ipynb
+    - notebooks/ch03/*.ipynb
+    - notebooks/ch04/*.ipynb
+    - notebooks/ch05/*.ipynb
+    - notebooks/ch06/*.ipynb
+    - notebooks/ch07/*.ipynb
+    - notebooks/ch08/*.ipynb
+    - notebooks/ch09/*.ipynb
+    - notebooks/ch10/*.ipynb
+    - notebooks/ch11/*.ipynb
+    - notebooks/ch12/*.ipynb
+    - notebooks/ch13/*.ipynb
+    - notebooks/ch14/*.ipynb
+    - data/ch14/**/*
+    - data/ch13/*
+
+lang: zh-Hant
+language: _language-zh-TW.yml
+number-sections: false
+
+book:
+  title: "化學資訊學入門：用 Python 與 RDKit 動手學"
+  page-footer:
+    center: "書稿與程式碼採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)；隨附資料維持各自授權，範圍見 [LICENSE](https://github.com/517justin/cheminfo-intro/blob/main/LICENSE)。"
+  chapters:
+    - index.qmd
+    - part: chapters/ch00/index.qmd
+      chapters:
+        - chapters/ch00/00-01-what-is-cheminformatics.qmd
+        - chapters/ch00/00-02-applications.qmd
+        - chapters/ch00/00-03-research-pain-points.qmd
+        - chapters/ch00/00-04-reading-guide.qmd
+        - chapters/ch00/00-05-getting-started-with-colab.qmd
+        - chapters/ch00/exercises.qmd
+    - part: chapters/ch01/index.qmd
+      chapters:
+        - chapters/ch01/01-01-molecular-graphs.qmd
+        - chapters/ch01/01-02-smiles.qmd
+        - chapters/ch01/01-03-inchi-and-inchikey.qmd
+        - chapters/ch01/01-04-mol-and-sdf.qmd
+        - chapters/ch01/exercises.qmd
+    - part: chapters/ch02/index.qmd
+      chapters:
+        - chapters/ch02/02-01-read-write-draw.qmd
+        - chapters/ch02/02-02-atoms-bonds-rings.qmd
+        - chapters/ch02/02-03-substructure-smarts.qmd
+        - chapters/ch02/02-04-standardization-and-salts.qmd
+        - chapters/ch02/02-05-conformers-and-reactions.qmd
+        - chapters/ch02/exercises.qmd
+    - part: chapters/ch03/index.qmd
+      chapters:
+        - chapters/ch03/03-01-pubchem.qmd
+        - chapters/ch03/03-02-chembl.qmd
+        - chapters/ch03/03-03-chemical-databases.qmd
+        - chapters/ch03/03-04-moleculenet.qmd
+        - chapters/ch03/03-05-data-cleaning.qmd
+        - chapters/ch03/03-06-public-data-bias.qmd
+        - chapters/ch03/exercises.qmd
+    - part: chapters/ch04/index.qmd
+      chapters:
+        - chapters/ch04/04-01-molecular-descriptors.qmd
+        - chapters/ch04/04-02-physicochemical-descriptors.qmd
+        - chapters/ch04/04-03-lipinski-rules.qmd
+        - chapters/ch04/04-04-mordred.qmd
+        - chapters/ch04/exercises.qmd
+    - part: chapters/ch05/index.qmd
+      chapters:
+        - chapters/ch05/05-01-why-quantum-chemistry.qmd
+        - chapters/ch05/05-02-psi4-first-calculation.qmd
+        - chapters/ch05/05-03-frontier-orbitals.qmd
+        - chapters/ch05/05-04-atomic-charges.qmd
+        - chapters/ch05/05-05-absorption-spectra.qmd
+        - chapters/ch05/05-06-gfn2-xtb.qmd
+        - chapters/ch05/05-07-gpu-accelerated-dft.qmd
+        - chapters/ch05/05-08-quantum-descriptors.qmd
+        - chapters/ch05/exercises.qmd
+    - part: chapters/ch06/index.qmd
+      chapters:
+        - chapters/ch06/06-01-molecular-fingerprints.qmd
+        - chapters/ch06/06-02-morgan-fingerprints.qmd
+        - chapters/ch06/06-03-maccs-keys.qmd
+        - chapters/ch06/06-04-tanimoto-similarity.qmd
+        - chapters/ch06/06-05-virtual-screening.qmd
+        - chapters/ch06/06-06-butina-clustering.qmd
+        - chapters/ch06/exercises.qmd
+    - part: chapters/ch07/index.qmd
+      chapters:
+        - chapters/ch07/07-01-murcko-scaffolds.qmd
+        - chapters/ch07/07-02-maximum-common-substructure.qmd
+        - chapters/ch07/07-03-matched-molecular-pairs.qmd
+        - chapters/ch07/exercises.qmd
+    - part: chapters/ch08/index.qmd
+      chapters:
+        - chapters/ch08/08-01-chemical-space.qmd
+        - chapters/ch08/08-02-principal-component-analysis.qmd
+        - chapters/ch08/08-03-tsne-and-umap.qmd
+        - chapters/ch08/08-04-hdbscan.qmd
+        - chapters/ch08/exercises.qmd
+    - part: chapters/ch09/index.qmd
+      chapters:
+        - chapters/ch09/09-01-qsar-tasks.qmd
+        - chapters/ch09/09-02-linear-regression.qmd
+        - chapters/ch09/09-03-regularization.qmd
+        - chapters/ch09/09-04-nearest-neighbors.qmd
+        - chapters/ch09/09-05-logistic-regression.qmd
+        - chapters/ch09/09-06-decision-trees.qmd
+        - chapters/ch09/09-07-tree-ensembles.qmd
+        - chapters/ch09/09-08-support-vector-machines.qmd
+        - chapters/ch09/09-09-partial-least-squares.qmd
+        - chapters/ch09/09-10-gaussian-processes.qmd
+        - chapters/ch09/09-11-model-selection.qmd
+        - chapters/ch09/exercises.qmd
+    - part: chapters/ch10/index.qmd
+      chapters:
+        - chapters/ch10/10-01-random-and-scaffold-splits.qmd
+        - chapters/ch10/10-02-evaluation-metrics.qmd
+        - chapters/ch10/10-03-cross-validation.qmd
+        - chapters/ch10/10-04-feature-selection.qmd
+        - chapters/ch10/10-05-applicability-domain.qmd
+        - chapters/ch10/10-06-conformal-prediction.qmd
+        - chapters/ch10/10-07-activity-cliffs.qmd
+        - chapters/ch10/exercises.qmd
+    - part: chapters/ch11/index.qmd
+      chapters:
+        - chapters/ch11/11-01-why-interpretability.qmd
+        - chapters/ch11/11-02-feature-importance.qmd
+        - chapters/ch11/11-03-shap.qmd
+        - chapters/ch11/11-04-fingerprint-attribution.qmd
+        - chapters/ch11/11-05-gnn-explanations.qmd
+        - chapters/ch11/11-06-limits-of-explanations.qmd
+        - chapters/ch11/exercises.qmd
+    - part: chapters/ch12/index.qmd
+      chapters:
+        - chapters/ch12/12-01-small-data.qmd
+        - chapters/ch12/12-02-experimental-design.qmd
+        - chapters/ch12/12-03-uncertainty.qmd
+        - chapters/ch12/12-04-bayesian-optimization.qmd
+        - chapters/ch12/12-05-exploration-and-exploitation.qmd
+        - chapters/ch12/12-06-active-learning.qmd
+        - chapters/ch12/12-07-multiobjective-optimization.qmd
+        - chapters/ch12/12-08-transfer-and-sim2real.qmd
+        - chapters/ch12/exercises.qmd
+
+    - part: chapters/ch13/index.qmd
+      chapters:
+        - chapters/ch13/13-01-data-silos.qmd
+        - chapters/ch13/13-02-negative-results.qmd
+        - chapters/ch13/13-03-metadata-and-fair.qmd
+        - chapters/ch13/13-04-expert-knowledge.qmd
+        - chapters/ch13/exercises.qmd
+
+    - part: chapters/ch14/index.qmd
+      chapters:
+        - chapters/ch14/14-01-chembl-case-study.qmd
+        - chapters/ch14/14-02-reaction-optimization.qmd
+        - chapters/ch14/exercises.qmd
+
+    - part: chapters/ch15/index.qmd
+      chapters:
+        - chapters/ch15/15-01-graph-transformers.qmd
+        - chapters/ch15/15-02-multitask-learning.qmd
+        - chapters/ch15/15-03-pretrained-representations.qmd
+        - chapters/ch15/15-04-string-generation.qmd
+        - chapters/ch15/15-05-latent-and-graph-generation.qmd
+        - chapters/ch15/15-06-genetic-optimization.qmd
+        - chapters/ch15/15-07-language-models.qmd
+        - chapters/ch15/15-08-self-driving-labs.qmd
+        - chapters/ch15/15-09-chemistry-and-computing.qmd
+        - chapters/ch15/15-10-further-resources.qmd
+
+    - glossary.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    code-copy: true

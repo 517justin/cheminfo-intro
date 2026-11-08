@@ -1,0 +1,34 @@
+---
+description: "從資料切分、評估指標、交叉驗證談到適用範圍、預測區間與活性懸崖，判斷模型遇到新分子時還能不能信。"
+---
+
+# 第 10 章　QSAR 與機器學習：評估與可信度篇 {#sec-model-evaluation .unnumbered}
+
+模型在測試資料上拿到不錯的分數，就能放心拿來預測新分子嗎？答案要看「新分子」和訓練資料有多像。預測同一系列分子換個取代基的結果，和預測一個從沒看過的骨架，難度完全不同，評估方式也應該跟著不同。這一章接續上一章的模型，討論怎麼切分資料、怎麼計算誤差、怎麼挑模型和特徵，讓評估結果真的反映實際用途。
+
+除了整體的平均誤差，我們也會檢查新分子離訓練資料有多遠（適用範圍）、預測區間有多寬（Conformal Prediction），以及結構很像、活性卻差很多的**活性懸崖**（activity cliff）。知道模型在哪些情況下可信、哪些情況下不可信，下一章解釋模型、第 12 章決定下一輪實驗時，才有可靠的依據。
+
+## 閱讀順序
+
+| 閱讀路線 | 操作時要核對什麼？ |
+|---|---|
+| [資料切分](10-01-random-and-scaffold-splits.qmd) → [評估指標](10-02-evaluation-metrics.qmd) | 將來要預測的分子與訓練分子有多相近？用什麼單位或判定門檻評分？ |
+| [交叉驗證](10-03-cross-validation.qmd) → [特徵選擇](10-04-feature-selection.qmd) | 挑樹深或選描述符時，哪些資料必須留在訓練流程之外？ |
+| [適用範圍](10-05-applicability-domain.qmd) → [預測區間](10-06-conformal-prediction.qmd) | 新分子離訓練資料多遠？預測區間的涵蓋率在哪些條件下成立？ |
+| [活性懸崖](10-07-activity-cliffs.qmd) → [章末綜合練習](exercises.qmd) | 遇到結構近似、活性卻相差很大的分子，要回頭查看哪一筆量測？ |
+
+## 執行環境與下載
+
+本章的 notebook 用一般的 CPU 就能執行，書中的結果是在 Colab 2026.07（Python 3.12.13）上跑出來的。從下表下載檔案後，在 Colab 選「檔案 → 上傳筆記本」，從第一格開始依序執行。第一次下載 MoleculeNet 資料時需要連網。
+
+各小節的模型分數不一定能直接放在一起比。要比較之前，先確認兩邊用的是同一份資料、同一組特徵，以及同一種切分方式。
+
+| 小節 | Notebook |
+|---|---|
+| 10-01 資料切分：random 與 scaffold split | [下載 .ipynb](../../notebooks/ch10/10-01-random-and-scaffold-splits.ipynb) |
+| 10-02 評估指標怎麼看（迴歸、分類） | [下載 .ipynb](../../notebooks/ch10/10-02-evaluation-metrics.ipynb) |
+| 10-03 交叉驗證與過擬合 | [下載 .ipynb](../../notebooks/ch10/10-03-cross-validation.ipynb) |
+| 10-04 特徵選擇 | [下載 .ipynb](../../notebooks/ch10/10-04-feature-selection.ipynb) |
+| 10-05 模型適用範圍（Applicability Domain） | [下載 .ipynb](../../notebooks/ch10/10-05-applicability-domain.ipynb) |
+| 10-06 預測區間：Conformal Prediction | [下載 .ipynb](../../notebooks/ch10/10-06-conformal-prediction.ipynb) |
+| 10-07 活性懸崖為什麼讓模型失準 | [下載 .ipynb](../../notebooks/ch10/10-07-activity-cliffs.ipynb) |

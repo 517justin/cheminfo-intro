@@ -1,0 +1,19 @@
+{
+  "chosen_model": "Random forest",
+  "threshold": 0.6607425441265976,
+  "rows": 137,
+  "scaffolds": 50,
+  "splits": {
+    "train": 95,
+    "valid": 14,
+    "test": 28
+  },
+  "top5_mean": 5.935927324183343,
+  "test_mean": 6.0699362610575145,
+  "top5_ge7": 0,
+  "test_ge7": 3,
+  "training_range": [
+    4.585026652029182,
+    7.698970004336019
+  ]
+}

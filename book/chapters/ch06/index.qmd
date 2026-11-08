@@ -1,0 +1,30 @@
+---
+description: "用 Morgan 指紋與 MACCS keys 編碼分子結構，以 Tanimoto 相似度搜尋候選物，並用 Butina 分群挑出不同結構系列的代表。"
+---
+
+# 第 6 章　分子指紋與相似度 {#sec-fingerprints-similarity .unnumbered}
+
+描述符適合比較分子的大小、極性這類整體性質。如果想從一大批化合物裡找出「結構很像」的分子，就需要記下更細的結構資訊，例如有哪些官能基、每個原子周圍接了什麼。**分子指紋**（molecular fingerprint）把這些局部結構特徵編成一串 0 和 1，兩個分子的指紋重疊得越多，結構就越相似。
+
+這一章介紹最常用的 Morgan 指紋和 MACCS keys，用 Tanimoto 係數計算相似度，再用相似度搜尋候選物（虛擬篩選）和分群（Butina）。我們也會看到，同一批分子換一種指紋，排名和分群結果都可能改變；而結構相似，也不保證活性相近。指紋接下來會用在化學空間作圖和性質預測。至於兩個分子到底差在哪幾個原子，下一章會回到結構式逐一比較。
+
+## 閱讀順序
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [什麼是分子指紋](06-01-molecular-fingerprints.qmd) → [Morgan 指紋](06-02-morgan-fingerprints.qmd) 與 [MACCS keys](06-03-maccs-keys.qmd) | 對同一個分子使用不同指紋，各會記下哪些結構特徵？如何從亮起的位元查回這些特徵？ |
+| [Tanimoto 相似度](06-04-tanimoto-similarity.qmd) → [相似度搜尋與虛擬篩選](06-05-virtual-screening.qmd) | 已知一個活性分子，怎麼用指紋的重疊程度排出候選物的送測順序？ |
+| [Tanimoto 相似度](06-04-tanimoto-similarity.qmd) → [Butina 分群](06-06-butina-clustering.qmd) → [章末綜合練習](exercises.qmd) | 手上只有五個送測名額，怎麼用分群結果挑出不同結構系列的代表？ |
+
+## 執行環境與下載
+
+前四節用 ESOL 的分子結構來算指紋，後兩節用 BACE 的抑制劑資料練習篩選和分群，六份 notebook 都只需要 CPU。從下表下載要執行的 notebook，在 Colab 2026.07（Python 3.12.13）選「檔案 → 上傳筆記本」，再從第一格開始依序執行。如果是第一次用 DeepChem 讀資料，可以先看 [3.4　MoleculeNet 與 DeepChem](../ch03/03-04-moleculenet.qmd)，了解分子結構和實驗值各放在哪一欄。
+
+| 小節 | Notebook |
+|---|---|
+| 6.1 什麼是分子指紋 | [下載 .ipynb](../../notebooks/ch06/06-01-molecular-fingerprints.ipynb) |
+| 6.2 Morgan 指紋 | [下載 .ipynb](../../notebooks/ch06/06-02-morgan-fingerprints.ipynb) |
+| 6.3 MACCS keys | [下載 .ipynb](../../notebooks/ch06/06-03-maccs-keys.ipynb) |
+| 6.4 Tanimoto 相似度 | [下載 .ipynb](../../notebooks/ch06/06-04-tanimoto-similarity.ipynb) |
+| 6.5 相似度搜尋與虛擬篩選 | [下載 .ipynb](../../notebooks/ch06/06-05-virtual-screening.ipynb) |
+| 6.6 依相似度分群（Butina） | [下載 .ipynb](../../notebooks/ch06/06-06-butina-clustering.ipynb) |

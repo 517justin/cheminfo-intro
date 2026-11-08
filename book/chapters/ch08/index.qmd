@@ -1,0 +1,28 @@
+---
+description: "用 PCA、t-SNE、UMAP 把分子畫成化學空間地圖，再用 HDBSCAN 找出聚集區，並從圖回查結構與實測值。"
+---
+
+# 第 8 章　化學空間視覺化 {#sec-chemical-space-maps .unnumbered}
+
+前幾章都在比較一個一個的分子。這一章把視野拉遠，改看整批化合物：資料集裡哪些分子聚在一起？哪一類結構比較少？新的候選分子落在哪裡？**化學空間**（chemical space）的想法，就是把每個分子放到一張地圖上，位置越近的分子，結構或性質也越接近，就像地圖上相鄰的城市。
+
+描述符和指紋動輒有幾十、上千個維度，沒辦法直接畫出來，所以要先降到二維。這一章依序介紹 PCA、t-SNE 和 UMAP 三種降維方法，再用 HDBSCAN 找出資料中的聚集區。每種方法都會保留一部分差異、犧牲另一部分，所以圖上兩點靠得近，不一定代表性質接近，我們會反覆從圖回到結構和實測值確認。這張地圖之後也能用來檢查模型遇到的新分子，以及挑選下一輪實驗的候選。
+
+## 閱讀順序
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [什麼是化學空間](08-01-chemical-space.qmd) → [PCA](08-02-principal-component-analysis.qmd) | 只有兩個物化量時，一欄畫一軸就夠了。換成四個描述符，圖上兩點靠得近代表什麼？ |
+| [PCA](08-02-principal-component-analysis.qmd) → [t-SNE 與 UMAP](08-03-tsne-and-umap.qmd) | 候選物旁邊就是已知分子，怎麼核對它們的結構究竟有多像、實測性質差多少？ |
+| [密度分群（HDBSCAN）](08-04-hdbscan.qmd) → [章末綜合練習](exercises.qmd) | 圖上擠成一團的分子，真的會分在同一群嗎？調整參數後，哪些分子換了群，哪些仍未分群？ |
+
+## 執行環境與下載
+
+四節都只用一般的 CPU 就能跑完，不需要 GPU。下載 notebook 後，在 Colab 2026.07（Python 3.12.13）選「檔案 → 上傳筆記本」，從第一格開始依序執行。第一次執行需要連網下載套件和 MoleculeNet 資料。8.3 第一次跑 UMAP 時會比較慢，因為背後的 Numba 套件要先把程式編譯成機器碼，多等一下是正常的。想複習描述符和指紋怎麼算，可以回看[第 4 章](../ch04/index.qmd)和[第 6 章](../ch06/index.qmd)。
+
+| 小節 | Notebook |
+|---|---|
+| 8.1 什麼是化學空間 | [下載 .ipynb](../../notebooks/ch08/08-01-chemical-space.ipynb) |
+| 8.2 PCA | [下載 .ipynb](../../notebooks/ch08/08-02-principal-component-analysis.ipynb) |
+| 8.3 t-SNE 與 UMAP | [下載 .ipynb](../../notebooks/ch08/08-03-tsne-and-umap.ipynb) |
+| 8.4 密度分群（HDBSCAN） | [下載 .ipynb](../../notebooks/ch08/08-04-hdbscan.ipynb) |

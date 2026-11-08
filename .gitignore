@@ -1,0 +1,6 @@
+book/.quarto/
+book/_book/
+book/.venv/
+**/__pycache__/
+.DS_Store
+book/review/

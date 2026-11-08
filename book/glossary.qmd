@@ -1,0 +1,184 @@
+---
+description: "依分子表示、資料整理、模型、評估與實驗設計彙整本書中英術語，區分容易混用的化學量與統計概念。"
+---
+
+# 中英術語表 {#sec-glossary .unnumbered}
+
+本表供閱讀時查找，定義以本書的使用情境為主。遇到相近的中文名稱，先比對英文、公式與量測方式；不能只因欄名相似，就把兩種結果合併。
+
+## 分子結構與表示
+
+對照第 1、2、6、7 章。
+
+| 本書用語 | 英文／縮寫 | 在本書中的意思 |
+|---|---|---|
+| 化學資訊學 | cheminformatics / chemoinformatics | 整理、搜尋與分析化學資料，支援性質研究、預測及候選選擇。 |
+| 分子圖 | molecular graph | 以原子為節點、化學鍵為邊，另保存元素、電荷、鍵級等屬性。 |
+| SMILES | Simplified Molecular Input Line Entry System | 以文字表達分子連接關係及可選的立體化學等資訊；不同字串可能表示同一分子。 |
+| 正規 SMILES | canonical SMILES | 依指定軟體的規則產生的一致字串，也有人譯作「標準 SMILES」；跨軟體與版本未必相同，也不等於已完成去鹽等清理。 |
+| InChI | International Chemical Identifier | 以分層方式表達分子身分的識別表示；比較時要確認使用的層與設定。 |
+| InChIKey | InChIKey | 由 InChI 產生的固定長度雜湊識別碼，便於搜尋；不能直接反推出完整結構。 |
+| SMARTS | SMARTS | 描述子結構查詢條件的語言；可指定原子、鍵及其環境，不是一般分子的另一份量測資料。 |
+| 官能基 | functional group | 具有特定成鍵環境的一組原子，例如羥基或羰基；只數元素不足以辨認。 |
+| 幾何結構 | molecular geometry | 一組原子的三維位置，包括鍵長、鍵角等資訊；應記錄座標來源與單位。 |
+| 構形（亦稱構象） | conformation / conformer | 在既定連接關係下的空間排列；conformer 指可辨認的構形。比較三維描述符時，須交代採用的構形。 |
+| 立體構型 | configuration | 例如 R／S 所指定的立體配置，與單鍵轉動造成的構形差別分開處理。 |
+| 分子骨架 | molecular scaffold | 依約定保留的分子核心。Murcko 骨架主要由環系及連接環系的部分構成，不等同所有研究者對核心的判斷。 |
+| 最大共同子結構 | maximum common substructure, MCS | 在指定原子與鍵比對規則下，一組分子共享的最大子結構；結果取決於比對條件。 |
+| 配對分子 | matched molecular pair, MMP | 依指定切割與配對規則，只在局部結構有差異的一對分子。 |
+| 分子指紋 | molecular fingerprint | 將結構特徵編碼成位元或計數向量；不同指紋保留的資訊不同。 |
+| Morgan 指紋 | Morgan fingerprint | 逐層彙整原子周圍環境的指紋；半徑、向量長度與手性設定都會影響結果。 |
+| MACCS keys | MACCS structural keys | 依預定義結構條件產生的指紋；各位元與特定查詢規則相關。 |
+| Tanimoto 相似度 | Tanimoto similarity | 本書位元指紋中，共同為 1 的位元數除以至少一方為 1 的位元數；空指紋等邊界依工具規則處理。 |
+
+## 性質、描述符與量子化學
+
+對照第 4、5 章。計算值與實測值即使使用同一單位，也要保留來源與物理定義。
+
+| 本書用語 | 英文／縮寫 | 在本書中的意思 |
+|---|---|---|
+| 分子描述符 | molecular descriptor | 由分子結構、幾何或計算結果取得的數值特徵；「描述子」為同義譯名。 |
+| 分子量 | molecular weight, MW | 本書表格以 RDKit 計算、用 g/mol 報告的量；不是每筆樣本重新量測的質譜結果。 |
+| 拓撲極性表面積 | topological polar surface area, TPSA | 由結構片段估計的極性表面積，通常以 Å² 表示；不是由當前構形直接量得的表面。 |
+| 氫鍵供體／受體 | hydrogen-bond donor / acceptor, HBD / HBA | 能參與相應氫鍵作用的結構角色；計數取決於所用結構與規則。 |
+| 分配係數的對數 | logP | 通常指中性形式在兩相間分配的常用對數；須區分計算估計與量測值。 |
+| 分布係數的對數 | logD | 在指定 pH 下綜合不同電離形式的兩相分布對數，不能不看 pH 就當成 logP。 |
+| 水溶解度的對數 | logS | 本書 ESOL 的 S 以 mol/L 表示後取常用對數；較負的值表示較低溶解度。 |
+| 半數抑制濃度 | IC50 | 在指定測試條件下達到半數抑制的濃度；不同測試的值不必然可直接比較。 |
+| 半數抑制濃度的負對數 | pIC50 | IC50 換成 mol/L 後取負的常用對數；值越大，對應的 IC50 越小。 |
+| 定量結構—活性關係 | quantitative structure–activity relationship, QSAR | 用分子表示建立與指定生物活性端點的定量關係。 |
+| 定量結構—性質關係 | quantitative structure–property relationship, QSPR | 用分子表示建立與指定性質的定量關係；性質不必是生物活性。 |
+| 單點能量計算 | single-point energy calculation | 固定原子位置求電子結構與能量，不在此步驟調整幾何。 |
+| 幾何最佳化 | geometry optimization | 依所選方法調整原子位置以尋找局部低能幾何；不保證找到全域最低點。 |
+| 基組 | basis set | 展開軌域等量所用的函數集合；選擇影響計算近似與成本。 |
+| 密度泛函理論 | density functional theory, DFT | 以電子密度為核心的電子結構方法；結果仍依泛函及其他計算設定而定。 |
+| 含時密度泛函理論 | time-dependent density functional theory, TDDFT | 本書以線性響應形式估計激發能等性質，與基態 DFT 能量分開判讀。 |
+| 最高占據分子軌域 | highest occupied molecular orbital, HOMO | 指定電子態與占據設定下，能量最高的占據軌域。 |
+| 最低未占據分子軌域 | lowest unoccupied molecular orbital, LUMO | 指定電子態與占據設定下，能量最低的未占據軌域。 |
+| HOMO–LUMO 能隙 | HOMO–LUMO gap | 本書按軌域能量差定義；不直接等同光學激發能或實測吸收峰。 |
+| 部分電荷 | partial charge | 按指定電子密度分配或經驗規則得到的原子電荷；不同方案的值不必相同。 |
+| 振子強度 | oscillator strength | 描述躍遷強弱的無因次量，不是任意光譜曲線的峰高。 |
+| 垂直激發 | vertical excitation | 固定原子核位置時兩電子態之間的能量差，與幾何鬆弛後的能量差不同。 |
+
+## 資料處理與研究紀錄
+
+對照第 3、13 章。
+
+| 本書用語 | 英文／縮寫 | 在本書中的意思 |
+|---|---|---|
+| 特徵 | feature, X | 預測或分析時提供給方法的輸入；可能是描述符、指紋或條件編碼。 |
+| 標籤／目標值 | label / target, y | 模型要預測的結果；要連同端點定義與量測方法理解。 |
+| 端點 | endpoint | 研究要判定或量測的具體結果，例如某項測試下的 IC50。 |
+| 缺值 | missing value | 目前沒有可用數值；原因可能是未測、未記錄或計算失敗，不能一律當零。 |
+| 去重 | deduplication | 依指定識別與比對規則處理重複紀錄；不是看到相同結構就刪除獨立複測。 |
+| 分子標準化 | molecular standardization | 依明確化學規則整理分子表示；去鹽、電荷與互變異構處理需說明，不等同 canonical SMILES。 |
+| 特徵標準化 | feature standardization | 本書常指依訓練資料的平均與標準差調整數值尺度；用於測試資料的參數不能重估。 |
+| 正規化 | normalization | 依特定規則調整尺度、總和或範數的泛稱；須看實際公式，不能直接當成標準化或正則化。 |
+| 獨熱編碼 | one-hot encoding | 以不同欄表示類別；不自動建立類別間的化學相似關係。 |
+| 後設資料 | metadata | 解釋數值如何產生及如何使用的資訊，例如單位、方法、日期、條件與來源。 |
+| FAIR 原則 | Findable, Accessible, Interoperable, Reusable | 使資料可尋得、可存取、可互通、可重用；不表示所有資料都必須無限制公開。 |
+| 分析產率 | analytical yield | 依指定分析方法與定量規則估計的產率，需保留內標、校正及計算方式。 |
+| 分離產率 | isolated yield | 以實際分離取得的產物報告的產率；不能與分析產率不加區分地合併。 |
+| 投入原子比 | input atomic ratio | 由已知投入組分與用量計算的元素莫耳比；不直接等同反應中活性物種的配位數。 |
+
+## 化學空間與模型
+
+對照第 8、9 章。
+
+| 本書用語 | 英文／縮寫 | 在本書中的意思 |
+|---|---|---|
+| 化學空間 | chemical space | 依所選分子表示形成的比較空間；座標和距離的含義取決於表示法。 |
+| 主成分分析 | principal component analysis, PCA | 找出輸入變異較大的線性方向，不使用預測目標決定投影。 |
+| 主成分迴歸 | principal component regression, PCR | 先做 PCA，再以保留的成分建立迴歸模型。 |
+| 偏最小平方迴歸 | partial least squares regression, PLS | 利用輸入與目標之間的關係建立投影成分；投影也必須在訓練資料內擬合。 |
+| t-SNE | t-distributed stochastic neighbor embedding | 主要用於呈現局部鄰近關係的非線性投影；圖上遠近不能全部當成原空間距離。 |
+| UMAP | Uniform Manifold Approximation and Projection | 建立鄰近關係並投影至低維空間的方法；結果依參數與輸入表示而變。 |
+| HDBSCAN | Hierarchical Density-Based Spatial Clustering of Applications with Noise | 依密度結構分群，可留下未歸群點；群組不是自動產生的化學分類。 |
+| 迴歸 | regression | 預測連續數值的任務；「回歸」是常見同義寫法。 |
+| 分類 | classification | 預測事先定義類別的任務；類別門檻與意義需另行指定。 |
+| 正則化 | regularization | 對模型施加限制或懲罰以控制複雜度，例如 Ridge 與 Lasso；與資料正規化不同。 |
+| k 近鄰 | k-nearest neighbors, k-NN | 依選定表示與距離，使用鄰近樣本作預測。 |
+| 邏輯迴歸 | logistic regression | 本書用於二元分類，將線性分數轉為機率估計；名稱含迴歸不代表它在此預測連續性質。 |
+| 隨機森林 | random forest, RF | 結合多棵隨機化決策樹的預測；仍受資料分布與訓練範圍限制。 |
+| 梯度提升 | gradient boosting | 逐步加入模型以改善所選損失的集成方法。 |
+| 支援向量機／迴歸 | support vector machine / regression, SVM / SVR | 以間隔或容許誤差等準則建立模型；核函數可用於非線性關係。 |
+| 核函數 | kernel function | 定義輸入間的相似關係；在高斯過程中用來描述函數值間的共變異。 |
+| 高斯過程 | Gaussian process, GP | 對函數建立機率模型，依資料與核假設給出預測平均及不確定性。 |
+
+## 評估、解釋與可信度
+
+對照第 10、11 章。
+
+| 本書用語 | 英文／縮寫 | 在本書中的意思 |
+|---|---|---|
+| 骨架切分 | scaffold split | 依骨架分組分配資料，避免同組骨架同時落入訓練與測試；不保證完全沒有局部相似分子。 |
+| 訓練／驗證／測試集 | training / validation / test set | 分別用於擬合、開發選擇及最後評估；資料用途要先約定。 |
+| 資料洩漏 | data leakage | 模型開發使用了原本不應取得的評估資訊，包括前處理、選特徵或調參時偷看答案。 |
+| 交叉驗證 | cross-validation, CV | 讓資料依規則輪流作訓練與驗證；每折內須重做會從資料學到參數的步驟。 |
+| 折外預測 | out-of-fold prediction, OOF | 每筆紀錄由沒有用該筆資料訓練的那一折模型產生預測。 |
+| 過擬合（亦稱過度擬合） | overfitting | 模型過度配合開發資料的特徵，對未見資料的表現較差。 |
+| 平均絕對誤差 | mean absolute error, MAE | 預測與參考值之差取絕對值後平均；與目標相同單位。 |
+| 均方根誤差 | root mean squared error, RMSE | 誤差平方平均後開根號，對較大的誤差較敏感；與目標相同單位。 |
+| 決定係數 | coefficient of determination, R² | 比較平方誤差與指定資料中均值基準的指標，可為負；不是預測正確的百分比。 |
+| 適用範圍 | applicability domain, AD | 依資料及方法定義，判斷候選是否接近模型已有經驗；範圍內也不保證每筆預測正確。 |
+| 預測區間 | prediction interval | 對單一未知結果提供的區間；與平均值估計的信賴區間不同。 |
+| 共形預測 | conformal prediction | 利用校準資料構造預測集合或區間；覆蓋率主張有交換性等條件，不是每個分子的個別保證。 |
+| 校準／校正 | calibration | 機率校準是檢查預測機率是否符合實際頻率；共形預測中的校正資料則用來設定區間寬度。兩者用途不同，須依該節定義判讀。 |
+| 活性懸崖 | activity cliff | 結構相近而活性差異大的情況；相近及差異大都需要明確規則。 |
+| 特徵重要性 | feature importance | 在特定模型及計算方法下，對特徵影響程度的摘要；不是因果證明。 |
+| 置換重要性 | permutation importance | 打亂一欄後觀察評估表現變化；受相關特徵與資料分布影響。 |
+| SHAP | SHapley Additive exPlanations | 相對指定背景，將模型輸出差異分配給特徵的方法；不直接等於實驗中的因果貢獻。 |
+
+## 實驗設計與進階方法
+
+對照第 12、14、15 章。
+
+| 本書用語 | 英文／縮寫 | 在本書中的意思 |
+|---|---|---|
+| 實驗計畫法 | design of experiments, DoE | 依研究目的安排因子與實驗組合的方法，包含因子設計、篩選、反應曲面等不同選擇。 |
+| 代理模型 | surrogate model | 用較低計算成本近似昂貴量測或計算結果，以支援候選比較與選點。 |
+| 貝氏最適化 | Bayesian optimization, BO | 結合代理模型及取得函數，逐輪選擇下一個值得評估的候選；亦稱貝氏最佳化。 |
+| 取得函數 | acquisition function | 將預測與不確定性等資訊轉成選點依據的規則；其分數不是實測結果。 |
+| 預期改善量 | expected improvement, EI | 在預測分布下，超過目前最佳值之改善量的期望；亦稱期望改善量，需說明是否另設改善門檻。 |
+| 探索／利用 | exploration / exploitation | 分別偏向取得未知區域資訊、利用目前看好的候選；選擇取決於研究目標及預算。 |
+| 主動學習 | active learning | 依目前模型與目標選擇下一批要取得標籤的資料；不必以尋找最大性質值為目的。 |
+| 多目標最適化 | multi-objective optimization | 同時考慮多項可能互相牽制的目標，通常需要呈現取捨。 |
+| Pareto 前緣 | Pareto front | 在比較集合中，無法在不讓至少一個目標變差的情況下改善其他目標的候選邊界；不代表唯一最佳方案。 |
+| 遷移學習 | transfer learning | 將來源任務或資料中學到的資訊用於目標問題；是否有益須在目標資料驗證。 |
+| 模擬到實驗 | simulation to reality, Sim2Real | 處理模擬與真實量測之間的差異；不能只因模擬資料多就假設能直接替代實驗。 |
+| 圖神經網路 | graph neural network, GNN | 在圖結構上彙整資訊、學習表示的模型；原子與鍵的輸入定義仍須指定。 |
+| 多任務學習 | multi-task learning | 共用部分模型以同時學習多個目標；未量測的標籤不能直接當陰性。 |
+| 預訓練 | pretraining | 在目標任務前先學習表示或模型參數；可否遷移仍需評估。 |
+| 分子生成 | molecular generation | 產生候選分子表示或結構的過程；有效字串不等於可合成或符合目標性質。 |
+| 遺傳演算法 | genetic algorithm, GA | 以候選群體、修改、重組與篩選反覆搜尋；目標分數的化學意義要另行確認。 |
+| 大型語言模型 | large language model, LLM | 依輸入產生文字的模型，也可透過介面協調工具；工具計算與實驗證據須保留來源。 |
+| 自駕實驗室 | self-driving laboratory | 將量測結果回饋到下一輪決策的實驗系統；能自動操作的設備不一定具備這種閉迴路。 |
+
+## 補充查找
+
+| 本書用語 | 英文／縮寫 | 在本書中的意思 |
+|---|---|---|
+| 虛擬篩選 | virtual screening | 用計算方法對候選分子篩選或排序，供後續實驗參考。 |
+| 富集因子 | enrichment factor, EF | 入選名單的活性物比例相對整個候選庫活性物比例的倍數。 |
+| Butina 分群 | Butina clustering | 依距離門檻與鄰居數選中心並分組；同群分子不保證兩兩都達到相似度門檻。 |
+| 雜湊碰撞 | hash collision | 不同特徵映到相同編碼或位元的情形。 |
+| 精確率／召回率 | precision / recall | 分別問預測為陽性的樣本中多少是真的陽性，以及真陽性中找回多少；分母不同。 |
+| ROC-AUC | area under the receiver operating characteristic curve | 彙整不同門檻下真陽性率與假陽性率的排序指標；不直接指定操作門檻。 |
+| 基團貢獻法 | group-contribution method | 依已定義基團及其貢獻估計性質的方法；本書亦稱群貢獻法。 |
+| 原子貢獻 | atom contribution | 按指定歸因方法分配給原子的模型分數；方法不同，所回答的問題也不同。 |
+| 遮蔽 | masking | 隱藏或修改模型輸入資訊的操作；不等於真的移除原子或斷鍵。 |
+| 訊息傳遞 | message passing | 圖模型沿節點關係彙整資訊並更新表示的過程。 |
+| 因子／水準 | factor / level | 因子是要比較或控制的條件，水準是該條件採用的值或類別。 |
+| 信賴上界 | upper confidence bound, UCB | 本書最大化任務中，以預測平均加上加權不確定性形成的選點分數。 |
+| Δ 學習 | delta learning | 學習參考計算與目標之差，再用預測差值修正參考值。 |
+| 資料字典 | data dictionary | 說明各欄名稱、型態、單位與缺值等規則的文件。 |
+| 回溯評估 | retrospective evaluation | 以既有資料重現決策並評估結果，不等同於前瞻的新實驗驗證。 |
+| 微調 | fine-tuning | 用目標任務資料更新既有模型的部分或全部參數。 |
+
+## 容易混淆的用法
+
+「最佳化」與「最適化」在本書是 optimization 的不同譯法。章節標題保留既定名稱；談分子幾何、模型參數或實驗目標時，應同時交代究竟改變哪些量、依什麼準則判斷改善。
+
+「正規 SMILES」「分子標準化」「特徵標準化」「正規化」與「正則化」不是同一個步驟。前兩者涉及分子表示及清理規則，中間兩者涉及數值尺度，最後一項涉及模型限制。實作時以程式使用的函式、參數與公式核對，不能只看中文名稱。
+
+構形、幾何結構與立體構型也要分開。調整鍵長與鍵角是在改變幾何；單鍵轉動可以得到不同構形；R／S 則指定立體配置。只有二維結構圖，不足以知道實驗中的三維位置。

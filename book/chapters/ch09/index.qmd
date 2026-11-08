@@ -1,0 +1,40 @@
+---
+description: "用水溶解度、BACE 活性與 Ames 試驗資料，比較線性迴歸、k-NN、決策樹、SVM、高斯過程等常用 QSAR 模型。"
+---
+
+# 第 9 章　QSAR 與機器學習：模型篇 {#sec-qsar-models .unnumbered}
+
+有了分子結構、描述符或指紋，以及對應的實測值，就可以試著預測還沒量過的分子。這就是 **QSAR**（quantitative structure–activity relationship，定量構效關係）和 QSPR 的基本想法。這一章用水溶解度、BACE 抑制劑活性和 Ames 致突變性試驗的資料，說明怎麼把化學問題寫成迴歸（預測數值）或分類（預測類別）任務，再實際比較幾種常用的機器學習模型。
+
+各種模型學習的方式不同：線性迴歸替每個描述符找一個權重，k-NN 參考最相近的分子，決策樹一層一層往下分支，SVM 和高斯過程則透過核函數處理非線性的關係。我們會用同一份資料比較它們的預測誤差，也看看訓練時間和資料量的影響。不過，模型在手邊的資料上表現好，不代表遇到新分子也一樣好，這件事留到下一章專門討論。
+
+## 閱讀順序
+
+閱讀前可先複習 [3.4　MoleculeNet 與 DeepChem](../ch03/03-04-moleculenet.qmd)，看看每列輸入特徵如何對應到分子的實驗標籤，以及哪些分子分在同一組。比較模型成績時，可對照[第 10 章](../ch10/index.qmd)。
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [分類與迴歸](09-01-qsar-tasks.qmd) → [線性迴歸](09-02-linear-regression.qmd) → [正則化](09-03-regularization.qmd) | 活性標籤代表什麼？與常數基準相比，結構資訊能改善多少？ |
+| [k-NN](09-04-nearest-neighbors.qmd) 與 [邏輯迴歸](09-05-logistic-regression.qmd) | 要預測一個分子的 Ames 試驗結果，先找出最近的鄰居，看其中幾個呈陽性。改用整批訓練分子估計特徵權重後，模型預測的陽性機率是多少？ |
+| [決策樹](09-06-decision-trees.qmd) → [Random Forest 與 Gradient Boosting](09-07-tree-ensembles.qmd) | 沿著哪些分支可以查出一個分子的預測結果？改用多棵樹以後，預測又有什麼變化？ |
+| [SVM 與 SVR](09-08-support-vector-machines.qmd) → [高斯過程](09-10-gaussian-processes.qmd) | 先看 SVM 與 SVR 如何用核函數判斷類別、估計溶解度，再看高斯過程如何同時給出溶解度預測與預測區間。 |
+| [PCA → PCR → PLS](09-09-partial-least-squares.qmd) | 先用指紋替分子找座標，再用座標預測溶解度。如果在選投影軸時就考慮溶解度，預測會如何改變？ |
+| [模型選擇與計算成本](09-11-model-selection.qmd) → [章末綜合練習](exercises.qmd) | 在固定的驗證分子上，降低誤差要付出多少訓練成本？ |
+
+## 執行環境與下載
+
+從下表下載各節的 notebook，在 Colab 2026.07（Python 3.12.13）選「檔案 → 上傳筆記本」，從第一格開始依序執行。每一節都可以單獨跑，用一般的 CPU 就夠了，不需要 GPU；第一次執行需要連網下載資料。BACE 範例用同一個酵素標的比較迴歸和分類，ESOL 範例用來預測水溶解度。9.4 到 9.8 的分類範例都用 MutagenLou2023 的 Ames 試驗結果，而且訓練集、驗證集和測試集在各節都是同一批分子，所以不同模型的成績可以直接比較。
+
+| 小節 | Notebook |
+|---|---|
+| 09-01 QSAR 是什麼：分類與迴歸 | [下載 .ipynb](../../notebooks/ch09/09-01-qsar-tasks.ipynb) |
+| 09-02 線性迴歸 | [下載 .ipynb](../../notebooks/ch09/09-02-linear-regression.ipynb) |
+| 09-03 正則化：Ridge、Lasso、Elastic Net | [下載 .ipynb](../../notebooks/ch09/09-03-regularization.ipynb) |
+| 09-04 k-NN | [下載 .ipynb](../../notebooks/ch09/09-04-nearest-neighbors.ipynb) |
+| 09-05 邏輯迴歸 | [下載 .ipynb](../../notebooks/ch09/09-05-logistic-regression.ipynb) |
+| 09-06 決策樹 | [下載 .ipynb](../../notebooks/ch09/09-06-decision-trees.ipynb) |
+| 09-07 Random Forest 與 Gradient Boosting | [下載 .ipynb](../../notebooks/ch09/09-07-tree-ensembles.ipynb) |
+| 09-08 SVM 與 SVR | [下載 .ipynb](../../notebooks/ch09/09-08-support-vector-machines.ipynb) |
+| 09-09 從 PCA 到 PCR 與 PLS | [下載 .ipynb](../../notebooks/ch09/09-09-partial-least-squares.ipynb) |
+| 09-10 高斯過程（GP） | [下載 .ipynb](../../notebooks/ch09/09-10-gaussian-processes.ipynb) |
+| 09-11 模型怎麼選：資料量與計算成本 | [下載 .ipynb](../../notebooks/ch09/09-11-model-selection.ipynb) |

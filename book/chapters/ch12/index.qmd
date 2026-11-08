@@ -1,0 +1,35 @@
+---
+description: "實驗名額有限時怎麼安排第一批實驗、下一輪該測誰：從 DoE、不確定性、貝氏最適化、主動學習到多目標取捨與 Sim2Real。"
+---
+
+# 第 12 章　資料不夠怎麼辦：小數據與實驗設計 {#sec-small-data-design .unnumbered}
+
+研發現場最常見的狀況，是資料永遠不夠：一個專案也許只有十幾到幾十筆實驗，每一次量測都要花時間和材料。這時候的問題不只是「怎麼建模」，而是「下一個實驗該做什麼」。第一批實驗要怎麼安排？有了結果之後，下一輪該測最有希望的分子，還是模型最沒把握的分子？
+
+這一章從**實驗計畫法**（design of experiments, DoE）安排第一批實驗開始，接著介紹預測的不確定性、**貝氏最適化**（Bayesian optimization）和主動學習（active learning），再談多個目標互相拉扯時怎麼取捨，以及怎麼用計算資料補足少量的實測值。這些方法都要和「同樣的實驗預算下隨機挑選」比一比，才看得出多花的功夫值不值得。第 13 章接著討論實驗紀錄怎麼保存，第 14 章再把逐輪選點用在反應條件的實戰演練。
+
+## 閱讀順序
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [手上的資料夠嗎？](12-01-small-data.qmd) → [如何安排第一批實驗](12-02-experimental-design.qmd) → [預測的不確定性](12-03-uncertainty.qmd) | 第一批只有幾個量測名額，怎麼挑才能分辨各項因素？量完以後，哪些候選分子的性質仍難以預測？ |
+| [貝氏最適化](12-04-bayesian-optimization.qmd) → [探索與利用](12-05-exploration-and-exploitation.qmd) → [主動學習](12-06-active-learning.qmd) | 下一個名額要留給最可能打破紀錄的分子，還是模型最拿不準的分子？怎麼評估這個選擇值不值得？ |
+| [多目標最適化](12-07-multiobjective-optimization.qmd) → [章末綜合練習](exercises.qmd) | 一個分子在某項性質上占優，另一項卻落後，該保留哪些候選，再請實驗同事決定？ |
+| [遷移學習與 Sim2Real](12-08-transfer-and-sim2real.qmd) | 如果已經有計算結果，可以用少量實測值校正嗎？要留下哪些分子，才能檢查校正對新樣品有沒有幫助？ |
+
+## 執行環境與下載
+
+八份 notebook 都只需要一般的 CPU，不用 GPU，而且每一份都能單獨執行，不必照順序跑。下載後，在 Colab 2026.07（Python 3.12.13）選「檔案 → 上傳筆記本」，從第一格開始依序執行。第一次執行時要安裝套件、下載資料，所以需要連上網路。
+
+逐輪選點的練習用的是資料庫裡已經量好的實測值，等於把一次實驗「重播」出來。操作時，候選分子的實測值會先藏起來，等你決定選誰之後才揭開，這樣每一次的決定都只用到當時真正拿得到的資料。如果想先複習模型怎麼估計未知分子的性質，可以看[第 9 章的高斯過程](../ch09/09-10-gaussian-processes.qmd)。
+
+| 小節 | Notebook |
+|---|---|
+| 12.1 為什麼研發現場總是資料不夠 | [下載 .ipynb](../../notebooks/ch12/12-01-small-data.ipynb) |
+| 12.2 實驗計畫法（DoE）：如何安排第一批實驗 | [下載 .ipynb](../../notebooks/ch12/12-02-experimental-design.ipynb) |
+| 12.3 不確定性：模型有多少把握 | [下載 .ipynb](../../notebooks/ch12/12-03-uncertainty.ipynb) |
+| 12.4 貝氏最適化：下一個實驗該做什麼 | [下載 .ipynb](../../notebooks/ch12/12-04-bayesian-optimization.ipynb) |
+| 12.5 探索與利用的平衡 | [下載 .ipynb](../../notebooks/ch12/12-05-exploration-and-exploitation.ipynb) |
+| 12.6 主動學習（Active Learning） | [下載 .ipynb](../../notebooks/ch12/12-06-active-learning.ipynb) |
+| 12.7 多目標最適化 | [下載 .ipynb](../../notebooks/ch12/12-07-multiobjective-optimization.ipynb) |
+| 12.8 遷移學習的概念與用模擬資料補足（Sim2Real） | [下載 .ipynb](../../notebooks/ch12/12-08-transfer-and-sim2real.ipynb) |

@@ -1,0 +1,33 @@
+---
+description: "用 Psi4、xTB 與 GPU4PySCF 計算能量、前線軌域、原子電荷與吸收光譜，比較方法的速度與精度，再把結果當成描述符建模。"
+---
+
+# 第 5 章　量子化學計算 {#sec-quantum-chemistry .unnumbered}
+
+分子的性質不只取決於原子怎麼連接，也和原子在空間中的位置、電子怎麼分布有關。HOMO、LUMO、原子電荷、吸收波長這些資訊，光看結構式算不出來，需要量子化學計算。這幾年 Psi4、xTB、pySCF 這類開源工具越來越好用，在 Colab 上就能執行，化學資訊學也越來越常把量子化學的結果當成描述符來用。
+
+這一章先用最小的分子，把總能量、計算方法和基組的意思講清楚，再介紹前線軌域、原子電荷和吸收光譜。分子一多，計算時間就成了問題，所以我們也會比較半經驗法 GFN2-xTB 和 GPU 加速 DFT 的速度與精度。最後一節把量子化學算出的數值當成描述符來預測性質，銜接後面的機器學習章節。這些數值都建立在某種近似之上，讀結果時，記得一起看用了什麼方法和計算條件。
+
+## 閱讀順序
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [為什麼需要量子化學](05-01-why-quantum-chemistry.qmd) → [第一個 Psi4 計算](05-02-psi4-first-calculation.qmd) | 同一個分子換了座標或計算設定，為什麼能量也會變？ |
+| [前線軌域](05-03-frontier-orbitals.qmd) → [原子電荷](05-04-atomic-charges.qmd) → [吸收光譜](05-05-absorption-spectra.qmd) | 軌域圖上的兩種顏色、部分電荷的正負號和光譜上的峰，各代表什麼？ |
+| [GFN2-xTB](05-06-gfn2-xtb.qmd) → [GPU 加速 DFT](05-07-gpu-accelerated-dft.qmd) | 換了近似方法，或只換運算硬體，比較結果時要分別考慮哪些條件？ |
+| [量子描述符與 QSPR](05-08-quantum-descriptors.qmd) → [章末綜合練習](exercises.qmd) | 拿到新分子的結構時，哪些欄位已經有資料可供預測？ |
+
+## 執行環境
+
+本章以 Colab 2026.07（Python 3.12.13）為準。第一節和最後一節只需要本書的一般 CPU 環境。中間六節會用到 Psi4、xTB 或 GPU4PySCF 這些量子化學程式，安裝步驟都寫在各節 notebook 的第一格，從第一格開始依序執行即可。要跑 GPU4PySCF 的那一節，先在 Colab 的「執行階段 → 變更執行階段類型」選擇 GPU。請從下表下載 notebook，再到 Colab 選「檔案 → 上傳筆記本」；也可以從各節的「在 Colab 開啟」連結直接開啟。
+
+| 小節 | Notebook |
+|---|---|
+| 5.1 為什麼化學資訊學需要量子化學 | [下載 .ipynb](../../notebooks/ch05/05-01-why-quantum-chemistry.ipynb) |
+| 5.2 在 Colab 上用 Psi4 做第一個計算 | [下載 .ipynb](../../notebooks/ch05/05-02-psi4-first-calculation.ipynb) |
+| 5.3 HOMO、LUMO 與軌域視覺化 | [下載 .ipynb](../../notebooks/ch05/05-03-frontier-orbitals.ipynb) |
+| 5.4 原子電荷 | [下載 .ipynb](../../notebooks/ch05/05-04-atomic-charges.ipynb) |
+| 5.5 吸收光譜 | [下載 .ipynb](../../notebooks/ch05/05-05-absorption-spectra.ipynb) |
+| 5.6 速度與精度的取捨：GFN2-xTB | [下載 .ipynb](../../notebooks/ch05/05-06-gfn2-xtb.ipynb) |
+| 5.7 用 GPU 加速 DFT：pySCF 與 GPU4PySCF | [下載 .ipynb](../../notebooks/ch05/05-07-gpu-accelerated-dft.ipynb) |
+| 5.8 把量子化學結果當描述符（HOMO-LUMO gap 的 QSPR） | [下載 .ipynb](../../notebooks/ch05/05-08-quantum-descriptors.ipynb) |

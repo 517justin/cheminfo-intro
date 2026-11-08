@@ -1,0 +1,28 @@
+---
+description: "從分子圖讀到 SMILES、InChI、Mol 檔和 SDF，附四份可以獨立執行的 notebook。"
+---
+
+# 第 1 章　分子怎麼存進電腦 {#sec-storing-molecules .unnumbered}
+
+我們看結構式時，一眼就能認出羥基、苯環和雙鍵；但對電腦來說，一張結構圖只是一堆線條。要讓程式處理分子，得先把「哪些原子相連、用什麼鍵相連、有沒有電荷或立體化學」寫成電腦讀得懂的格式。同一個分子可以有好幾種寫法，看起來很像的兩筆紀錄也可能是不同的物質，這些差異會一路影響後面的資料庫比對和建模。
+
+這一章依序介紹四種常見的表示方式：把分子看成一張圖的**分子圖**（molecular graph）、一行文字就寫完結構的 **SMILES**、適合拿來查資料庫的 **InChI 與 InChIKey**，以及能一起保存座標和性質的 **Mol 檔與 SDF**。每種格式都有擅長和做不到的地方。讀完這一章，拿到一份分子資料時，就能判斷它保留了哪些化學資訊、還缺什麼。下一章會用 RDKit 實際操作這些格式，第 3 章再把同樣的檢查用在公開資料庫上。
+
+## 閱讀順序
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [分子就是一張圖](01-01-molecular-graphs.qmd) → [SMILES](01-02-smiles.qmd) | 兩個分子有一樣多的碳和氧，怎麼記下它們接法不同？沿分子走的路徑換了，寫出來的字串會怎麼變？ |
+| [SMILES](01-02-smiles.qmd) → [InChI 與 InChIKey](01-03-inchi-and-inchikey.qmd) | 收到兩串看起來不同的文字，怎麼檢查它們是否指向同一個結構？哪一種識別碼適合拿去查資料庫？ |
+| [Mol 檔與 SDF](01-04-mol-and-sdf.qmd) → [章末綜合練習](exercises.qmd) | 如果同事還需要分子圖的座標和量測紀錄，該交付什麼？檔案寫完再讀回時，要核對哪些欄位？ |
+
+## 執行環境與下載
+
+四份 notebook 彼此獨立，每一份都可以從第一格開始執行，一般的 CPU 就夠用。建議先看結構圖、自己試著判讀，再執行下一格看答案。本章使用的環境是 Colab 2026.07（Python 3.12.13）。從下表下載檔案後，在 Colab 選「檔案 → 上傳筆記本」就能打開；第一次安裝套件或讀取 ESOL 資料時需要連上網路。
+
+| 小節 | Notebook |
+|---|---|
+| 1.1 分子就是一張圖 | [下載 .ipynb](../../notebooks/ch01/01-01-molecular-graphs.ipynb) |
+| 1.2 SMILES | [下載 .ipynb](../../notebooks/ch01/01-02-smiles.ipynb) |
+| 1.3 InChI 與 InChIKey | [下載 .ipynb](../../notebooks/ch01/01-03-inchi-and-inchikey.ipynb) |
+| 1.4 Mol 檔與 SDF | [下載 .ipynb](../../notebooks/ch01/01-04-mol-and-sdf.ipynb) |

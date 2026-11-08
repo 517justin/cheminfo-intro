@@ -1,0 +1,28 @@
+---
+description: "用 RDKit 從結構計算分子量、logP、TPSA 等描述符，認識 Lipinski 規則，再用 Mordred 練習大量描述符的缺值處理與取捨。"
+---
+
+# 第 4 章　分子描述符 {#sec-descriptor-chapter .unnumbered}
+
+要讓電腦比較分子，最直接的方法是把結構換成數字。分子量、親脂性（logP）、極性表面積這些由結構算出來的數值，就叫做**分子描述符**（molecular descriptor）。每一種描述符只記下分子的一部分特徵，所以兩個分子的某個描述符相同，不表示它們在實驗中會有相同的表現。要選哪些描述符，取決於我們想分辨的是什麼。
+
+這一章從幾個容易對照結構的描述符開始，介紹常用的物化描述符和類藥性的 Lipinski 規則，最後用 Mordred 一次算出上千種描述符，談談缺值和取捨。這些數值表會一路用到後面的化學空間與機器學習章節。第 5 章會再補上量子化學算出的電子結構資訊，第 6 章則介紹另一種結構編碼方式：分子指紋。
+
+## 閱讀順序
+
+| 閱讀路線 | 動手做時要回答的問題 |
+|---|---|
+| [什麼是描述符](04-01-molecular-descriptors.qmd) → [常用物化描述符](04-02-physicochemical-descriptors.qmd) | 把兩個分子的描述符並排，從哪些數值看得出結構上的差別？ |
+| [常用物化描述符](04-02-physicochemical-descriptors.qmd) → [類藥性與 Lipinski 規則](04-03-lipinski-rules.qmd) | 分子量或親脂性超過門檻時，要回頭核對結構的哪一部分？值得補做什麼實驗？ |
+| [大量描述符的計算與取捨](04-04-mordred.qmd) → [章末綜合練習](exercises.qmd) | 上千欄描述符中，哪些可用於下一批分子？碰到缺值時怎麼追查原因？ |
+
+## 執行環境與下載
+
+四份 notebook 都可以單獨執行，不需要 GPU。從下表下載後，在 Colab 2026.07（Python 3.12.13）選「檔案 → 上傳筆記本」，再從第一格開始依序執行。第一次執行時要連上網路，下載套件和 MoleculeNet 資料。如果想知道資料裡的實驗值放在哪一欄、訓練集和測試集怎麼分，可以先看 [3.4　MoleculeNet 與 DeepChem](../ch03/03-04-moleculenet.qmd)。
+
+| 小節 | Notebook |
+|---|---|
+| 4.1 什麼是描述符 | [下載 .ipynb](../../notebooks/ch04/04-01-molecular-descriptors.ipynb) |
+| 4.2 常用物化描述符（分子量、logP、TPSA） | [下載 .ipynb](../../notebooks/ch04/04-02-physicochemical-descriptors.ipynb) |
+| 4.3 類藥性與 Lipinski 規則 | [下載 .ipynb](../../notebooks/ch04/04-03-lipinski-rules.ipynb) |
+| 4.4 大量描述符的計算（Mordred）與取捨 | [下載 .ipynb](../../notebooks/ch04/04-04-mordred.ipynb) |
