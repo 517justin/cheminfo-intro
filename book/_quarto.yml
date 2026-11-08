@@ -2,6 +2,7 @@ project:
   type: book
   output-dir: _book
   resources:
+    - llms.txt
     - notebooks/ch00/*.ipynb
     - notebooks/ch01/*.ipynb
     - notebooks/ch02/*.ipynb
@@ -26,6 +27,12 @@ number-sections: false
 
 book:
   title: "化學資訊學入門：用 Python 與 RDKit 動手學"
+  site-url: https://517justin.github.io/cheminfo-intro/
+  repo-url: https://github.com/517justin/cheminfo-intro
+  repo-subdir: book
+  repo-actions: [issue]
+  open-graph: true
+  twitter-card: true
   page-footer:
     center: "書稿與程式碼採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)；隨附資料維持各自授權，範圍見 [LICENSE](https://github.com/517justin/cheminfo-intro/blob/main/LICENSE)。"
   chapters:
