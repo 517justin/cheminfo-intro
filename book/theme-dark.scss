@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+
+// 深色主題：同一組色相，提亮並降低飽和度，維持與淺色版一致的識別。
+$teal-700:  #7cc9d4;
+$teal-600:  #52afbe;
+$teal-500:  #3f98a8;
+$slate-700: #e8eef1;
+$slate-500: #a3b3ba;
+$slate-300: #33424a;
+$slate-100: #1a2226;
+$brick:     #d98080;
+
+$primary:    #2f8393;
+$body-color: #d3dce0;
+$body-bg:    #141a1d;
+$link-color: $teal-700;
+$link-hover-color: #a6dce4;
+
+@import "theme-typography";
+$headings-color: $slate-700;
+
+$code-color: #e7a9b8;
+$code-bg:    #1b2428;
+$border-color: $slate-300;
+
+$toc-color:       $slate-500;
+$toc-active-border: $teal-600;
+
+// 規則會用到的衍生色（深色）
+$sidebar-bg: #181f23;
+$card-bg:    #1a2226;
+$line-soft:  rgba(255, 255, 255, 0.1);
+$line-guide: rgba(255, 255, 255, 0.12);
+$shadow:     rgba(0, 0, 0, 0.45);
+$tint-0:     rgba(82, 175, 190, 0.05);
+$tint-1:     rgba(82, 175, 190, 0.09);
+$tint-2:     rgba(82, 175, 190, 0.15);
+// 書中的圖是淺色底，深色模式下墊一層白底，避免圖中的配色失真
+$fig-bg:     #ffffff;
+$fig-pad:    0.6rem;
+
+/*-- scss:rules --*/
+
+@import "theme-rules";
