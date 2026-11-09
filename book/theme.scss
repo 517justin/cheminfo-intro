@@ -1,0 +1,277 @@
+/*-- scss:defaults --*/
+
+// 識別色取自書中圖表實際使用的色票（#176d78、#287d8e、#0f766e 等藍綠色系，
+// 搭配 #315c78 板岩藍與 #c55353 磚紅），讓網站與內文的圖看起來是同一套設計。
+$teal-700:  #0f5e68;
+$teal-600:  #176d78;
+$teal-500:  #287d8e;
+$slate-700: #233a44;
+$slate-500: #4a5f68;
+$slate-300: #cdd7db;
+$slate-100: #f4f7f8;
+$brick:     #b14a4a;
+
+$primary:    $teal-600;
+$body-color: #22313a;
+$body-bg:    #ffffff;
+$link-color: $teal-700;
+$link-hover-color: $teal-500;
+
+// 中文字型：優先用各系統內建的正體中文字型，不載入網路字型，
+// 避免數 MB 的下載與首次繪製延遲。
+$font-family-sans-serif:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial,
+  "PingFang TC", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei",
+  "Heiti TC", sans-serif;
+$font-family-monospace:
+  "SF Mono", "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+$font-size-base:   1.0625rem;   // 17px：中文在 16px 下偏小
+$line-height-base: 1.85;        // 中文需要比西文更鬆的行距
+
+$headings-font-weight: 600;
+$headings-color:       $slate-700;
+$h1-font-size:         1.95rem;
+$h2-font-size:         1.45rem;
+$h3-font-size:         1.2rem;
+
+// 版面寬度：正文約每行 34–38 個中文字，side bar 加寬讓章名不折行。
+$grid-sidebar-width: 310px;
+$grid-body-width:    760px;
+$grid-margin-width:  250px;
+
+$code-color: #9d4d5e;
+$code-bg:    #f6f8f9;
+$border-color: $slate-300;
+
+$toc-color:       $slate-500;
+$toc-active-border: $teal-600;
+
+/*-- scss:rules --*/
+
+body {
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+// 西文與數字用等寬數字，讓表格中的數值對齊
+body { font-variant-numeric: tabular-nums lining-nums; }
+p, li { font-variant-numeric: normal; }
+
+/* ---------- 標題層級 ---------- */
+
+#title-block-header .quarto-title h1.title,
+main h1 {
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  margin-bottom: 1.2rem;
+}
+
+main h2 {
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid $slate-300;
+  line-height: 1.5;
+}
+
+main h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: $teal-700;
+}
+
+// 各節開頭的「開場問題」是全書固定結構，給它一個明顯的樣式
+main h2#開場問題 {
+  border-bottom: none;
+  color: $teal-700;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  padding-left: 0.9rem;
+  border-left: 4px solid $teal-500;
+}
+
+/* ---------- 內文 ---------- */
+
+main p { margin-bottom: 1.15rem; }
+
+main a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+strong { font-weight: 600; color: $slate-700; }
+
+/* ---------- 側邊欄 ---------- */
+
+.sidebar-navigation {
+  background-color: $slate-100;
+  border-right: 1px solid $slate-300;
+}
+
+#quarto-sidebar .sidebar-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $slate-700;
+  padding-bottom: 0.35rem;
+}
+
+#quarto-sidebar .sidebar-item { font-size: 0.9rem; }
+
+#quarto-sidebar .sidebar-item-container { line-height: 1.5; }
+
+// 章（part）：粗體、上方留白、與前一章之間用細線分隔
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container:first-child {
+  font-weight: 600;
+  font-size: 0.94rem;
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(35, 58, 68, 0.1);
+}
+
+#quarto-sidebar .sidebar-item-section:first-of-type > .sidebar-item-container:first-child {
+  border-top: none;
+  margin-top: 0;
+}
+
+// 節：縮排並在左側加導引線，讓層級一眼看得出來
+#quarto-sidebar .sidebar-item-section .sidebar-item {
+  padding-left: 0.25rem;
+  margin-left: 0.55rem;
+  border-left: 1px solid rgba(35, 58, 68, 0.12);
+}
+
+#quarto-sidebar .sidebar-link {
+  color: $slate-500;
+  padding: 0.22rem 0.5rem;
+  border-radius: 4px;
+}
+
+#quarto-sidebar .sidebar-link:hover {
+  color: $teal-700;
+  background-color: rgba(23, 109, 120, 0.07);
+}
+
+#quarto-sidebar .sidebar-link.active,
+#quarto-sidebar .sidebar-item-container .active {
+  color: $teal-700;
+  font-weight: 600;
+  background-color: rgba(23, 109, 120, 0.1);
+}
+
+/* ---------- 右側目錄 ---------- */
+
+#quarto-margin-sidebar .nav-link { font-size: 0.86rem; }
+#TOC .nav-link.active { font-weight: 600; }
+
+/* ---------- 程式碼 ---------- */
+
+div.sourceCode {
+  border: 1px solid $slate-300;
+  border-radius: 6px;
+  background-color: $code-bg;
+}
+
+pre code { font-size: 0.86rem; line-height: 1.65; }
+
+code:not(.sourceCode) {
+  background-color: rgba(23, 109, 120, 0.07);
+  padding: 0.12em 0.35em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+/* ---------- 圖與表 ---------- */
+
+figure img, .figure img { border-radius: 4px; }
+
+figcaption, .figure-caption {
+  font-size: 0.88rem;
+  color: $slate-500;
+  line-height: 1.7;
+  margin-top: 0.6rem;
+}
+
+main table {
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+main thead th {
+  border-bottom: 2px solid $slate-300;
+  color: $slate-700;
+  font-weight: 600;
+}
+
+main tbody tr:nth-child(even) { background-color: rgba(23, 109, 120, 0.03); }
+
+/* ---------- 首頁章節卡片 ---------- */
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.9rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.chapter-card {
+  display: block;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid $slate-300;
+  border-left: 3px solid $teal-500;
+  border-radius: 6px;
+  background-color: #fff;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.chapter-card:hover {
+  border-color: $teal-600;
+  border-left-color: $teal-700;
+  box-shadow: 0 2px 10px rgba(35, 58, 68, 0.1);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.chapter-card .ch-num {
+  display: block;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  color: $teal-600;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.chapter-card .ch-title {
+  display: block;
+  font-weight: 600;
+  color: $slate-700;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.chapter-card .ch-desc {
+  display: block;
+  font-size: 0.86rem;
+  color: $slate-500;
+  line-height: 1.7;
+}
+
+/* ---------- 頁尾 ---------- */
+
+.nav-footer {
+  border-top: 1px solid $slate-300;
+  font-size: 0.86rem;
+  color: $slate-500;
+}
+
+/* ---------- 手機版 ---------- */
+
+@media (max-width: 991.98px) {
+  body { font-size: 1rem; }
+  main h2 { margin-top: 2rem; }
+  .chapter-grid { grid-template-columns: 1fr; }
+}
