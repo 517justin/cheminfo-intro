@@ -1,0 +1,22 @@
+// 字型、字級與版面寬度：淺色與深色共用。
+// 中文字型：優先用各系統內建的正體中文字型，不載入網路字型，
+// 避免數 MB 的下載與首次繪製延遲。
+$font-family-sans-serif:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial,
+  "PingFang TC", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei",
+  "Heiti TC", sans-serif;
+$font-family-monospace:
+  "SF Mono", "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+$font-size-base:   1.0625rem;   // 17px：中文在 16px 下偏小
+$line-height-base: 1.85;        // 中文需要比西文更鬆的行距
+
+$headings-font-weight: 600;
+$h1-font-size:         1.95rem;
+$h2-font-size:         1.45rem;
+$h3-font-size:         1.2rem;
+
+// 版面寬度：正文約每行 34–38 個中文字，side bar 加寬讓章名不折行。
+$grid-sidebar-width: 310px;
+$grid-body-width:    760px;
+$grid-margin-width:  250px;
