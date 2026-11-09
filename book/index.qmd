@@ -2,38 +2,89 @@
 
 這是一本寫給化學、材料背景讀者的化學資訊學入門書。我們用 Python 和 RDKit 處理真實的分子資料，每一節都附有可以在 Google Colab 上直接執行的 notebook，一邊讀、一邊跑，就能自己重算出書裡的數字和圖。對程式還不熟悉的讀者，建議從第 0 章開始。
 
-## 已收錄章節
-
-[第 0 章　前言](chapters/ch00/index.qmd) 從資料與研究問題認識化學資訊學，安排閱讀順序，並用 Colab 開始第一個分子資料實作。
-
-[第 1 章　分子怎麼存進電腦](chapters/ch01/index.qmd) 從原子與鍵看懂分子圖，把結構寫成字串、用識別碼查找，再連同量測紀錄一起存檔。
-
-[第 2 章　RDKit 基本操作](chapters/ch02/index.qmd) 從讀取與檢查分子開始，依化學條件搜尋官能基，保留標準化前後紀錄，再產生三維構形與反應候選。
-
-[第 3 章　化學資料庫](chapters/ch03/index.qmd) 從化合物身分、測試與來源紀錄讀起，查詢官方資料、核對單位與設限值，再檢查這批資料有哪些缺口。
-
-[第 4 章　分子描述符](chapters/ch04/index.qmd) 比較不同分子的大小、親脂性與極性，看看哪些結構差異能用幾個數字認出來。
-
-[第 5 章　量子化學計算](chapters/ch05/index.qmd) 從只有一個電子的氫分子離子出發，逐步讀懂總能量、軌域與光譜，最後將計算結果用於建模。
-
-[第 6 章　分子指紋與相似度](chapters/ch06/index.qmd) 把分子結構編成指紋，用來找類似物，也用來決定哪些結構值得各挑一個送測。
-
-[第 7 章　比較分子結構](chapters/ch07/index.qmd) 把分子結構並排，找出共用的核心，再檢查改動一處取代基後，實測活性差了多少。
-
-[第 8 章　化學空間視覺化](chapters/ch08/index.qmd) 把分子畫成一張圖，再拿圖上相鄰的兩點回查結構，看它們究竟有多像。
-
-[第 9 章　QSAR 與機器學習：模型篇](chapters/ch09/index.qmd) 讓不同模型做同一項預測，比較誤差，也算算為了改善預測得多花多少時間。
-
-[第 10 章　QSAR 與機器學習：評估與可信度篇](chapters/ch10/index.qmd) 討論一個模型遇到新分子時還能不能信。從資料怎麼切、誤差怎麼算，一路談到預測區間和活性懸崖。
-
-[第 11 章　模型解釋](chapters/ch11/index.qmd) 從可以手算的基團貢獻出發，追查模型如何得出一筆預測，再把想驗證的結構差異寫成實驗問題。
-
-[第 12 章　資料不夠怎麼辦：小數據與實驗設計](chapters/ch12/index.qmd) 討論量測名額有限時，第一批要挑哪些分子、下一輪該測誰，以及手邊的計算資料能幫上多少忙。
-
-[第 13 章　讓資料用得起來：研究資料管理](chapters/ch13/index.qmd) 以反應條件與產率整理實驗紀錄，保留低結果、方法與來源，再把化學判斷寫成可核對的欄位。
-
-[第 14 章　實戰專題](chapters/ch14/index.qmd) 用 EGFR 活性資料完成候選分子排序，再從既有反應紀錄練習逐輪選擇條件，檢查模型提出的建議能支持哪些實驗決定。
-
-[第 15 章　進階與展望](chapters/ch15/index.qmd) 以案例和比較表認識進階模型、分子生成與實驗自動化，判斷研究問題需要哪些資料、方法與驗證。
+```{=html}
+<div class="chapter-grid">
+  <a class="chapter-card" href="chapters/ch00/index.html">
+    <span class="ch-num">第 0 章</span>
+    <span class="ch-title">前言</span>
+    <span class="ch-desc">從資料與研究問題認識化學資訊學，安排閱讀順序，並用 Colab 開始第一個分子資料實作。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch01/index.html">
+    <span class="ch-num">第 1 章</span>
+    <span class="ch-title">分子怎麼存進電腦</span>
+    <span class="ch-desc">從原子與鍵看懂分子圖，把結構寫成字串、用識別碼查找，再連同量測紀錄一起存檔。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch02/index.html">
+    <span class="ch-num">第 2 章</span>
+    <span class="ch-title">RDKit 基本操作</span>
+    <span class="ch-desc">從讀取與檢查分子開始，依化學條件搜尋官能基，保留標準化前後紀錄，再產生三維構形與反應候選。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch03/index.html">
+    <span class="ch-num">第 3 章</span>
+    <span class="ch-title">化學資料庫</span>
+    <span class="ch-desc">從化合物身分、測試與來源紀錄讀起，查詢官方資料、核對單位與設限值，再檢查這批資料有哪些缺口。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch04/index.html">
+    <span class="ch-num">第 4 章</span>
+    <span class="ch-title">分子描述符</span>
+    <span class="ch-desc">比較不同分子的大小、親脂性與極性，看看哪些結構差異能用幾個數字認出來。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch05/index.html">
+    <span class="ch-num">第 5 章</span>
+    <span class="ch-title">量子化學計算</span>
+    <span class="ch-desc">從只有一個電子的氫分子離子出發，逐步讀懂總能量、軌域與光譜，最後將計算結果用於建模。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch06/index.html">
+    <span class="ch-num">第 6 章</span>
+    <span class="ch-title">分子指紋與相似度</span>
+    <span class="ch-desc">把分子結構編成指紋，用來找類似物，也用來決定哪些結構值得各挑一個送測。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch07/index.html">
+    <span class="ch-num">第 7 章</span>
+    <span class="ch-title">比較分子結構</span>
+    <span class="ch-desc">把分子結構並排，找出共用的核心，再檢查改動一處取代基後，實測活性差了多少。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch08/index.html">
+    <span class="ch-num">第 8 章</span>
+    <span class="ch-title">化學空間視覺化</span>
+    <span class="ch-desc">把分子畫成一張圖，再拿圖上相鄰的兩點回查結構，看它們究竟有多像。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch09/index.html">
+    <span class="ch-num">第 9 章</span>
+    <span class="ch-title">QSAR 與機器學習：模型篇</span>
+    <span class="ch-desc">讓不同模型做同一項預測，比較誤差，也算算為了改善預測得多花多少時間。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch10/index.html">
+    <span class="ch-num">第 10 章</span>
+    <span class="ch-title">QSAR 與機器學習：評估與可信度篇</span>
+    <span class="ch-desc">討論一個模型遇到新分子時還能不能信。從資料怎麼切、誤差怎麼算，一路談到預測區間和活性懸崖。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch11/index.html">
+    <span class="ch-num">第 11 章</span>
+    <span class="ch-title">模型解釋</span>
+    <span class="ch-desc">從可以手算的基團貢獻出發，追查模型如何得出一筆預測，再把想驗證的結構差異寫成實驗問題。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch12/index.html">
+    <span class="ch-num">第 12 章</span>
+    <span class="ch-title">資料不夠怎麼辦：小數據與實驗設計</span>
+    <span class="ch-desc">討論量測名額有限時，第一批要挑哪些分子、下一輪該測誰，以及手邊的計算資料能幫上多少忙。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch13/index.html">
+    <span class="ch-num">第 13 章</span>
+    <span class="ch-title">讓資料用得起來：研究資料管理</span>
+    <span class="ch-desc">以反應條件與產率整理實驗紀錄，保留低結果、方法與來源，再把化學判斷寫成可核對的欄位。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch14/index.html">
+    <span class="ch-num">第 14 章</span>
+    <span class="ch-title">實戰專題</span>
+    <span class="ch-desc">用 EGFR 活性資料完成候選分子排序，再從既有反應紀錄練習逐輪選擇條件，檢查模型提出的建議能支持哪些實驗決定。</span>
+  </a>
+  <a class="chapter-card" href="chapters/ch15/index.html">
+    <span class="ch-num">第 15 章</span>
+    <span class="ch-title">進階與展望</span>
+    <span class="ch-desc">以案例和比較表認識進階模型、分子生成與實驗自動化，判斷研究問題需要哪些資料、方法與驗證。</span>
+  </a>
+</div>
+```
 
 查找中英名詞或容易混淆的定義，可使用[中英術語表](glossary.qmd)。

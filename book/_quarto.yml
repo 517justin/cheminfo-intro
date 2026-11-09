@@ -25,6 +25,9 @@ lang: zh-Hant
 language: _language-zh-TW.yml
 number-sections: false
 
+crossref:
+  chapters: false
+
 book:
   title: "化學資訊學入門：用 Python 與 RDKit 動手學"
   site-url: https://517justin.github.io/cheminfo-intro/
@@ -33,6 +36,13 @@ book:
   repo-actions: [issue]
   open-graph: true
   twitter-card: true
+  page-navigation: true
+  back-to-top-navigation: true
+  sidebar:
+    style: docked
+    collapse-level: 1
+    pinned: true
+    search: true
   page-footer:
     center: "書稿與程式碼採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)；隨附資料維持各自授權，範圍見 [LICENSE](https://github.com/517justin/cheminfo-intro/blob/main/LICENSE)。"
   chapters:
@@ -187,5 +197,14 @@ bibliography: references.bib
 
 format:
   html:
+    theme:
+      - cosmo
+      - theme.scss
     toc: true
+    toc-depth: 2
+    toc-expand: true
     code-copy: true
+    code-overflow: wrap
+    fig-align: center
+    tbl-cap-location: bottom
+    link-external-newwindow: true
