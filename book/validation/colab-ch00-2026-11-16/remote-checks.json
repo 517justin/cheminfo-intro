@@ -1,0 +1,47 @@
+[
+  {
+    "notebook": "00-01-what-is-cheminformatics.ipynb",
+    "status": "PASS",
+    "code_sha256": "b5294236fe30944b465f842550e15c6081279396d0f7b4da754d5a6574a454b5",
+    "local_source_matches_colab": true,
+    "code_cells": 3,
+    "png_bytes": 28443,
+    "seconds": 14.23
+  },
+  {
+    "notebook": "00-02-applications.ipynb",
+    "status": "PASS",
+    "code_sha256": "7b7a54d8f228f6f0c040f949adb9442f5003c39ffddbdd689cdf1e2952beaf20",
+    "local_source_matches_colab": true,
+    "code_cells": 3,
+    "png_bytes": 140461,
+    "seconds": 10.94
+  },
+  {
+    "notebook": "00-03-research-pain-points.ipynb",
+    "status": "PASS",
+    "code_sha256": "f9f6f8cb183af0bb1b761f22544d5b02a81a4db1c929b6ad6229fea3df42fca2",
+    "local_source_matches_colab": true,
+    "code_cells": 3,
+    "png_bytes": 40391,
+    "seconds": 11.22
+  },
+  {
+    "notebook": "00-04-reading-guide.ipynb",
+    "status": "PASS",
+    "code_sha256": "73225540fc450b0054264366efc141df9b3d32183254874fdaaea2bdb3e238d1",
+    "local_source_matches_colab": true,
+    "code_cells": 3,
+    "png_bytes": 91881,
+    "seconds": 10.35
+  },
+  {
+    "notebook": "00-05-getting-started-with-colab.ipynb",
+    "status": "PASS",
+    "code_sha256": "7a98ffb26627abe30639b17cd40cb7136087ea7705c39558e01aa7e4f3c55eaf",
+    "local_source_matches_colab": true,
+    "code_cells": 3,
+    "png_bytes": 29242,
+    "seconds": 10.23
+  }
+]
