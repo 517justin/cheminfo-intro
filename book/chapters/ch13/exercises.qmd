@@ -1,4 +1,6 @@
-# 綜合練習：交接一份反應篩選資料 {#sec-research-data-exercises .unnumbered}
+# 章末綜合練習 {#sec-research-data-exercises .unnumbered}
+
+## 交接一份反應篩選資料
 
 另一位研究者準備接手這組 Suzuki–Miyaura 篩選，想知道哪些條件值得再測。請用本章 notebook 產生的資料包和特徵表，寫一頁交接說明。
 

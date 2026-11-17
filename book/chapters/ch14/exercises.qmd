@@ -1,4 +1,6 @@
-# 綜合練習：把模型建議交給實驗同事 {#sec-capstone-exercises .unnumbered}
+# 章末綜合練習 {#sec-capstone-exercises .unnumbered}
+
+## 把模型建議交給實驗同事
 
 從本章兩個專題中選一個，寫一頁實驗討論稿。讀者是熟悉化學、但沒有參與建模的同事；他只看這一頁，就應該知道你建議測什麼，以及這個建議還有哪些疑問。
 
