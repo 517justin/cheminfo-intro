@@ -19,7 +19,7 @@ description: "用 Psi4、xTB 與 GPU4PySCF 計算能量、前線軌域、原子�
 
 ## 執行環境
 
-本章以 Colab 2026.07（Python 3.12.13）為準。第一節和最後一節只需要本書的一般 CPU 環境。中間六節會用到 Psi4、xTB 或 GPU4PySCF 這些量子化學程式，安裝步驟都寫在各節 notebook 的第一格，從第一格開始依序執行即可。要跑 GPU4PySCF 的那一節，先在 Colab 的「執行階段 → 變更執行階段類型」選擇 GPU。請從下表下載 notebook，再到 Colab 選「檔案 → 上傳筆記本」；也可以從各節的「在 Colab 開啟」連結直接開啟。
+本章的 notebook 可以在 Colab 執行。第一節和最後一節只需要本書的一般 CPU 環境。中間六節會用到 Psi4、xTB 或 GPU4PySCF 這些量子化學程式，安裝步驟都寫在各節 notebook 的第一格，從第一格開始依序執行即可。要跑 GPU4PySCF 的那一節，先在 Colab 的「執行階段 → 變更執行階段類型」選擇 GPU。請從下表下載 notebook，再到 Colab 選「檔案 → 上傳筆記本」；也可以從各節的「在 Colab 開啟」連結直接開啟。
 
 | 小節 | Notebook |
 |---|---|

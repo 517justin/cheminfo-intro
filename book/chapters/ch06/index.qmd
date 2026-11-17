@@ -18,7 +18,7 @@ description: "用 Morgan 指紋與 MACCS keys 編碼分子結構，以 Tanimoto 
 
 ## 執行環境與下載
 
-前四節用 ESOL 的分子結構來算指紋，後兩節用 BACE 的抑制劑資料練習篩選和分群，六份 notebook 都只需要 CPU。從下表下載要執行的 notebook，在 Colab 2026.07（Python 3.12.13）選「檔案 → 上傳筆記本」，再從第一格開始依序執行。如果是第一次用 DeepChem 讀資料，可以先看 [3.4　MoleculeNet 與 DeepChem](../ch03/03-04-moleculenet.qmd)，了解分子結構和實驗值各放在哪一欄。
+前四節用 ESOL 的分子結構來算指紋，後兩節用 BACE 的抑制劑資料練習篩選和分群，六份 notebook 都只需要 CPU。從下表下載要執行的 notebook，在 Colab 選「檔案 → 上傳筆記本」，再從第一格開始依序執行。如果是第一次用 DeepChem 讀資料，可以先看 [3.4　MoleculeNet 與 DeepChem](../ch03/03-04-moleculenet.qmd)，了解分子結構和實驗值各放在哪一欄。
 
 | 小節 | Notebook |
 |---|---|

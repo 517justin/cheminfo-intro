@@ -18,7 +18,7 @@ description: "用 RDKit 從結構計算分子量、logP、TPSA 等描述符，�
 
 ## 執行環境與下載
 
-四份 notebook 都可以單獨執行，不需要 GPU。從下表下載後，在 Colab 2026.07（Python 3.12.13）選「檔案 → 上傳筆記本」，再從第一格開始依序執行。第一次執行時要連上網路，下載套件和 MoleculeNet 資料。如果想知道資料裡的實驗值放在哪一欄、訓練集和測試集怎麼分，可以先看 [3.4　MoleculeNet 與 DeepChem](../ch03/03-04-moleculenet.qmd)。
+四份 notebook 都可以單獨執行，不需要 GPU。從下表下載後，在 Colab 選「檔案 → 上傳筆記本」，再從第一格開始依序執行。第一次執行時要連上網路，下載套件和 MoleculeNet 資料。如果想知道資料裡的實驗值放在哪一欄、訓練集和測試集怎麼分，可以先看 [3.4　MoleculeNet 與 DeepChem](../ch03/03-04-moleculenet.qmd)。
 
 | 小節 | Notebook |
 |---|---|
