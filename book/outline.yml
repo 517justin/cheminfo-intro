@@ -22,7 +22,7 @@
 # 讀者版目前收錄的小節
 - id: 01-01
   slug: molecular-graphs
-  title: 分子就是一張圖
+  title: 從結構式到分子圖
   colab_only: false
 - id: 01-02
   slug: smiles

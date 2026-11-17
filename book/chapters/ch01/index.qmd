@@ -12,7 +12,7 @@ description: "從分子圖讀到 SMILES、InChI、Mol 檔和 SDF，附四份可�
 
 | 閱讀路線 | 動手做時要回答的問題 |
 |---|---|
-| [分子就是一張圖](01-01-molecular-graphs.qmd) → [SMILES](01-02-smiles.qmd) | 兩個分子有一樣多的碳和氧，怎麼記下它們接法不同？沿分子走的路徑換了，寫出來的字串會怎麼變？ |
+| [從結構式到分子圖](01-01-molecular-graphs.qmd) → [SMILES](01-02-smiles.qmd) | 兩個分子有一樣多的碳和氧，怎麼記下它們接法不同？沿分子走的路徑換了，寫出來的字串會怎麼變？ |
 | [SMILES](01-02-smiles.qmd) → [InChI 與 InChIKey](01-03-inchi-and-inchikey.qmd) | 收到兩串看起來不同的文字，怎麼檢查它們是否指向同一個結構？哪一種識別碼適合拿去查資料庫？ |
 | [Mol 檔與 SDF](01-04-mol-and-sdf.qmd) → [章末綜合練習](exercises.qmd) | 如果同事還需要分子圖的座標和量測紀錄，該交付什麼？檔案寫完再讀回時，要核對哪些欄位？ |
 
@@ -22,7 +22,7 @@ description: "從分子圖讀到 SMILES、InChI、Mol 檔和 SDF，附四份可�
 
 | 小節 | Notebook |
 |---|---|
-| 1.1 分子就是一張圖 | [下載 .ipynb](../../notebooks/ch01/01-01-molecular-graphs.ipynb) |
+| 1.1 從結構式到分子圖 | [下載 .ipynb](../../notebooks/ch01/01-01-molecular-graphs.ipynb) |
 | 1.2 SMILES | [下載 .ipynb](../../notebooks/ch01/01-02-smiles.ipynb) |
 | 1.3 InChI 與 InChIKey | [下載 .ipynb](../../notebooks/ch01/01-03-inchi-and-inchikey.ipynb) |
 | 1.4 Mol 檔與 SDF | [下載 .ipynb](../../notebooks/ch01/01-04-mol-and-sdf.ipynb) |
