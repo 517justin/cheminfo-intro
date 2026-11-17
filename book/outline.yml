@@ -290,7 +290,7 @@
   colab_only: false
 - id: 12-04
   slug: bayesian-optimization
-  title: 貝氏最適化：下一個實驗該做什麼
+  title: 貝氏最佳化：下一個實驗該做什麼
   colab_only: false
 - id: 12-05
   slug: exploration-and-exploitation
@@ -302,7 +302,7 @@
   colab_only: false
 - id: 12-07
   slug: multiobjective-optimization
-  title: 多目標最適化
+  title: 多目標最佳化
   colab_only: false
 - id: 12-08
   slug: transfer-and-sim2real
