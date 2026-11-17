@@ -4,7 +4,7 @@
 
 線上閱讀：https://517justin.github.io/cheminfo-intro/
 
-**驗證進度**：全書已有本機 Python 3.12.13 驗證紀錄；Colab 實機驗證持續進行。第 0 章五份 notebook 已於 2026-11-16 在 Colab 2026.07（Python 3.12.13、CPU）重跑通過，共用同一套件環境，詳見[驗證紀錄與保存範圍](book/validation/colab-ch00-2026-11-16/README.md)。第 5 章已完成 5.2、5.3、5.4、5.6、5.7；5.5 計算量大，仍在調整，其餘小節陸續補上。遇到問題歡迎開 issue。
+**驗證進度**：全書已有本機 Python 3.12.13 驗證紀錄；Colab 實機驗證持續進行。第 0 章五份 notebook 已於 2026-11-16 在 Colab 2026.07（Python 3.12.13、CPU）重跑通過，共用同一套件環境，詳見[驗證紀錄與保存範圍](book/validation/colab-ch00-2026-11-16/README.md)。第 1 章四份 notebook 已於 2026-11-17 在同版 Colab 通過實機驗證，其中 1.3 修正繪圖後端後重跑通過，詳見[第 1 章驗證紀錄](book/validation/colab-ch01-2026-11-17/README.md)。第 5 章已完成 5.2、5.3、5.4、5.6、5.7；5.5 計算量大，仍在調整，其餘小節陸續補上。遇到問題歡迎開 issue。
 
 - [第 0 章　前言](book/chapters/ch00/index.qmd)
 - [第 1 章　分子怎麼存進電腦](book/chapters/ch01/index.qmd)
@@ -34,6 +34,8 @@
 第 15 章保留十節，以圖表與案例導讀介紹深度學習、分子生成、大型語言模型與實驗自動化；不另設 notebooks、小練習或章末綜合練習。進階技術與應用的詳細內容將另行規劃。
 
 第 0 章包含五節入門導覽、五份 ESOL 實作 notebooks、五張實作圖與練習。本機已有 Python 3.12.13 驗證紀錄；五份 notebook 已完成 Colab 實機驗證，15 個程式格全部通過，產生五張圖及 0.5 的 CSV。此次修正了 Colab 繪圖後端的相容性問題；完整封存檔尚未下載至本機，詳見[本次驗證紀錄](book/validation/colab-ch00-2026-11-16/README.md)。
+
+第 1 章本次完成 1.1–1.4 的 Colab 驗證：12 個程式格、四張圖與 SDF 讀回檢查通過。四份共用同一 CPU 執行階段，其中 1.2 使用獨立套件環境；完整輸出封存檔尚未下載至本機，保存範圍見[驗證紀錄](book/validation/colab-ch01-2026-11-17/README.md)。
 
 ## 授權
 

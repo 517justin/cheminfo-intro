@@ -1,0 +1,46 @@
+[
+  {
+    "notebook": "01-01-molecular-graphs.ipynb",
+    "status": "PASS",
+    "elapsed_seconds": 85.61,
+    "code_sha256": "88ac74e9ec9ffb52ba7f800fb15f0ea913aeeae29f68b0de83a40db4e5c46357",
+    "local_code_matches_colab": true,
+    "code_cells": 3,
+    "displayed_pngs": 1,
+    "png_bytes": 16745,
+    "png_decode": "PASS"
+  },
+  {
+    "notebook": "01-02-smiles.ipynb",
+    "status": "PASS",
+    "elapsed_seconds": 15.45,
+    "code_sha256": "2bf4fd6b2ebdfa6a5b3c7721274be12a416ebdc15c719d4ad2ad8c4e873a923c",
+    "local_code_matches_colab": true,
+    "code_cells": 3,
+    "displayed_pngs": 1,
+    "png_bytes": 32727,
+    "png_decode": "PASS"
+  },
+  {
+    "notebook": "01-03-inchi-and-inchikey.ipynb",
+    "status": "PASS",
+    "elapsed_seconds": 9.02,
+    "code_sha256": "34c12687cafa724fa131e7ea78a0874f2ea8224445252ef28f814c4ab6ae5105",
+    "local_code_matches_colab": true,
+    "code_cells": 3,
+    "displayed_pngs": 1,
+    "png_bytes": 41184,
+    "png_decode": "PASS"
+  },
+  {
+    "notebook": "01-04-mol-and-sdf.ipynb",
+    "status": "PASS",
+    "elapsed_seconds": 8.87,
+    "code_sha256": "af05d2df4557c280fd4878a9ef75306922889194e18d34c870b6f18b39092cde",
+    "local_code_matches_colab": true,
+    "code_cells": 3,
+    "displayed_pngs": 1,
+    "png_bytes": 25569,
+    "png_decode": "PASS"
+  }
+]
