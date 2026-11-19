@@ -81,8 +81,10 @@ book:
           text: "2.3 子結構搜尋與 SMARTS"
         - href: chapters/ch02/02-04-standardization-and-salts.qmd
           text: "2.4 分子標準化與去鹽"
-        - href: chapters/ch02/02-05-conformers-and-reactions.qmd
-          text: "2.5 產生 3D 構形與化學反應"
+        - href: chapters/ch02/02-05-conformers.qmd
+          text: "2.5 產生與比較三維構形"
+        - href: chapters/ch02/02-06-reaction-rules.qmd
+          text: "2.6 用反應規則產生候選產物"
         - chapters/ch02/exercises.qmd
     - part: chapters/ch03/index.qmd
       chapters:

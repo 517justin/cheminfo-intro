@@ -53,8 +53,12 @@
   title: 分子標準化與去鹽
   colab_only: false
 - id: 02-05
-  slug: conformers-and-reactions
-  title: 產生 3D 構形與化學反應
+  slug: conformers
+  title: 產生與比較三維構形
+  colab_only: false
+- id: 02-06
+  slug: reaction-rules
+  title: 用反應規則產生候選產物
   colab_only: false
 - id: 03-01
   slug: pubchem

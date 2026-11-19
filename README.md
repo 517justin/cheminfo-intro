@@ -1,6 +1,6 @@
 # 化學資訊學入門：用 Python 與 RDKit 動手學
 
-目前收錄第 0 至 15 章，共 93 節與 83 份 notebook。
+目前收錄第 0 至 15 章，共 94 節與 84 份 notebook。
 
 線上閱讀：https://517justin.github.io/cheminfo-intro/
 
