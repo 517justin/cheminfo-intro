@@ -1,0 +1,121 @@
+OUTPUT 02-01-read-write-draw.ipynb
+Phenol Oc1ccccc1 0.0 True True
+Anisole COc1ccccc1 -1.85 True True
+Cyclohexanol OC1CCCCC1 -0.44 True True
+ESOL rows: 1128 SDF records: 3
+
+OUTPUT 02-02-atoms-bonds-rings.ipynb
+Phenol oxygen: (1, [(5, 'C', True)], ['SINGLE'])
+  atoms 7 ring sizes [6] aromatic atoms/bonds 6 6
+  oxygen in ring False formal charge 0
+Anisole oxygen: (0, [(0, 'C', False), (2, 'C', True)], ['SINGLE', 'SINGLE'])
+  atoms 8 ring sizes [6] aromatic atoms/bonds 6 6
+  oxygen in ring False formal charge 0
+Cyclohexanol oxygen: (1, [(1, 'C', False)], ['SINGLE'])
+  atoms 7 ring sizes [6] aromatic atoms/bonds 0 0
+  oxygen in ring False formal charge 0
+ESOL rows: 1128
+
+OUTPUT 02-03-substructure-smarts.ipynb
+This module requires PyTorch to be installed.
+Control | O | OH | alcohol | phenol | carboxylic acid
+ethanol [1, 1, 1, 0, 0]
+phenol [1, 1, 0, 1, 0]
+acetic acid [1, 1, 0, 0, 1]
+anisole [1, 0, 0, 0, 0]
+phenoxide [1, 0, 0, 0, 0]
+RDKit 2026.09.1 DeepChem 2.8.1.dev
+ESOL rows: 1128 normalization: False
+O matched rows: 722
+OH matched rows: 242
+alcohol matched rows: 154
+phenol matched rows: 91
+carboxylic acid matched rows: 0
+alcohol rows: 154
+alcohol sites: 274
+draw: ethanol alcohol ((2, 1),)
+draw: phenol phenol ((0, 1),)
+draw: acetic acid carboxylic acid ((3, 1, 2),)
+draw: anisole OH ()
+draw: phenoxide OH ()
+draw: ESOL: OC(c1ccccc1)C(O)c1ccccc1 alcohol ((7, 6), (9, 8))
+
+OUTPUT 02-04-standardization-and-salts.ipynb
+Sodium benzoate Cleanup O=C([O-])c1ccccc1.[Na+]
+Sodium benzoate FragmentParent O=C([O-])c1ccccc1
+Sodium benzoate Uncharger O=C(O)c1ccccc1
+Tetramethylammonium chloride Cleanup C[N+](C)(C)C.[Cl-]
+Tetramethylammonium chloride FragmentParent C[N+](C)(C)C
+Tetramethylammonium chloride Uncharger C[N+](C)(C)C
+RDKit 2026.09.1
+rows 1128 multifragment 0
+cleanup_changed     4
+parent_changed      0
+uncharge_changed    0
+   record_id   logS                                   original_key                                         cleanup_key                                    parent_candidate                                  uncharge_candidate
+ESOL-row-512 -1.981 CSCS(=O)CC(CO)NC(=O)C=Cc1c(C)[nH]c(=O)[nH]c1=O CSC[S+]([O-])CC(CO)NC(=O)C=Cc1c(C)[nH]c(=O)[nH]c1=O CSC[S+]([O-])CC(CO)NC(=O)C=Cc1c(C)[nH]c(=O)[nH]c1=O CSC[S+]([O-])CC(CO)NC(=O)C=Cc1c(C)[nH]c(=O)[nH]c1=O
+ESOL-row-519 -3.590           CC(=O)N(c1onc(C)c1C)S(=O)c1ccc(N)cc1           CC(=O)N(c1onc(C)c1C)[S+]([O-])c1ccc(N)cc1           CC(=O)N(c1onc(C)c1C)[S+]([O-])c1ccc(N)cc1           CC(=O)N(c1onc(C)c1C)[S+]([O-])c1ccc(N)cc1
+ESOL-row-749 -2.300                 CCOP(=S)(OCC)Oc1ccc(S(C)=O)cc1                 CCOP(=S)(OCC)Oc1ccc([S+](C)[O-])cc1                 CCOP(=S)(OCC)Oc1ccc([S+](C)[O-])cc1                 CCOP(=S)(OCC)Oc1ccc([S+](C)[O-])cc1
+ESOL-row-849 -0.830                                 C=CCSS(=O)CC=C                                 C=CCS[S+]([O-])CC=C                                 C=CCS[S+]([O-])CC=C                                 C=CCS[S+]([O-])CC=C
+
+OUTPUT 02-05-conformers.ipynb
+Butan-1-ol ESOL row 521 requested=12 embedded= 12 converged= 12
+relative energies kcal/mol [1.4399, 0.9133, 0.1674, 1.1338, 0.0, 0.4391, 0.1674, 0.1674, 0.3256, 0.7586, 2.0881, 1.9754]
+
+ARTIFACT results.json {
+  "dataset_rows": 1128,
+  "source_row": 521,
+  "requested": 12,
+  "embedded": 12,
+  "converged": 12,
+  "relative_energies_kcal_mol": [
+    1.4399414905968766,
+    0.9132748240664434,
+    0.16743998562929097,
+    1.1338436923666269,
+    0.0,
+    0.4390517249287349,
+    0.16743998338114485,
+    0.1674399834234226,
+    0.32555006071303527,
+    0.7586346467151746,
+    2.088094433406516,
+    1.9754274999358024
+  ],
+  "dihedrals_deg": [
+    61.628383333647236,
+    -65.2004172175626,
+    179.99919833436994,
+    -63.52399950376087,
+    179.99993182621105,
+    -178.54655378046897,
+    179.9991847787166,
+    179.9992727843847,
+    -178.6059050015697,
+    -65.21895859836938,
+    66.91080297348972,
+    -66.2870008034853
+  ]
+}
+OUTPUT 02-06-reaction-rules.ipynb
+Ethanol concept unique candidates ['CC=O']
+Propan-2-ol concept unique candidates ['CC(C)=O']
+tert-Butanol concept unique candidates []
+Phenol concept unique candidates []
+ESOL matched rows 124
+
+ARTIFACT results.json {
+  "dataset_rows": 1128,
+  "matched_rows": 124,
+  "candidate_rows": 212,
+  "concept_examples": {
+    "Ethanol": [
+      "CC=O"
+    ],
+    "Propan-2-ol": [
+      "CC(C)=O"
+    ],
+    "tert-Butanol": [],
+    "Phenol": []
+  }
+}

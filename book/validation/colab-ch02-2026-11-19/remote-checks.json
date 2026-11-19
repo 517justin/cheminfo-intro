@@ -1,0 +1,92 @@
+[
+  {
+    "notebook": "02-01-read-write-draw.ipynb",
+    "status": "PASS",
+    "seconds": 91.08,
+    "code_cells": 3,
+    "png_sizes": [
+      [
+        990,
+        260
+      ]
+    ],
+    "file_sha256": "8ae0355872e7c7940f81f06d81b0cd868e9e1fd3df56f15ccfd1f9b3e6a89360",
+    "code_sha256": "c47c8cad9286fa0b104ed29b59b421d46694db40e9bec6f74b29903d20badef8",
+    "local_source_matches_colab": true
+  },
+  {
+    "notebook": "02-02-atoms-bonds-rings.ipynb",
+    "status": "PASS",
+    "seconds": 9.41,
+    "code_cells": 3,
+    "png_sizes": [
+      [
+        1050,
+        270
+      ]
+    ],
+    "file_sha256": "16dff60ad9b7c78b7d8233cbbb832a94d1f76a50d3963f6f6bff357a27155e35",
+    "code_sha256": "160e7a8b762a791d919bc9209a9d888d7141f935a668c0d6f88b8662f52f7e56",
+    "local_source_matches_colab": true
+  },
+  {
+    "notebook": "02-03-substructure-smarts.ipynb",
+    "status": "PASS",
+    "seconds": 51.72,
+    "code_cells": 3,
+    "png_sizes": [
+      [
+        1020,
+        480
+      ]
+    ],
+    "file_sha256": "8eca28590a4e53e7eb56c5c3737be95d1acfd956be1f37a87a0a037dab99196d",
+    "code_sha256": "960d0b1f708855a04409135e80693c267349ca53813a7ffd9b90d4f42dc36510",
+    "local_source_matches_colab": true
+  },
+  {
+    "notebook": "02-04-standardization-and-salts.ipynb",
+    "status": "PASS",
+    "seconds": 11.35,
+    "code_cells": 3,
+    "png_sizes": [
+      [
+        1020,
+        480
+      ]
+    ],
+    "file_sha256": "9abeb1d1f2838093269115a3b480551d04f60e52ad82515c8f29a97bccc3ae39",
+    "code_sha256": "69ceec11d0d06afc9645ed6819042e30edc5103feda07ed5f15d03dccfb8623d",
+    "local_source_matches_colab": true
+  },
+  {
+    "notebook": "02-05-conformers.ipynb",
+    "status": "PASS",
+    "seconds": 12.52,
+    "code_cells": 3,
+    "png_sizes": [
+      [
+        1760,
+        736
+      ]
+    ],
+    "file_sha256": "b0fc32eeecac59d47ad704e327047b1363e567e07201e99365946f9a914c77f3",
+    "code_sha256": "d482e54aaf684a0c85a907e6a4cada3ce680c629a92d585d2d025a193e68fcac",
+    "local_source_matches_colab": true
+  },
+  {
+    "notebook": "02-06-reaction-rules.ipynb",
+    "status": "PASS",
+    "seconds": 11.04,
+    "code_cells": 3,
+    "png_sizes": [
+      [
+        700,
+        720
+      ]
+    ],
+    "file_sha256": "b418c158e706a7c675e349a9ae38311ca1cf959bbea9ea48425f3f0865487450",
+    "code_sha256": "ae96dd540d21356201d26ffaa9d566cd6103ddd5d8b567fe5f2bfd8bed40d138",
+    "local_source_matches_colab": true
+  }
+]
