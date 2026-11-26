@@ -4,7 +4,7 @@
 
 線上閱讀：https://517justin.github.io/cheminfo-intro/
 
-**驗證進度**：全書已有本機 Python 3.12.13 驗證紀錄；Colab 實機驗證持續進行。第 0 章五份 notebook 已於 2026-11-16 在 Colab 2026.07（Python 3.12.13、CPU）重跑通過，共用同一套件環境，詳見[驗證紀錄與保存範圍](book/validation/colab-ch00-2026-11-16/README.md)。第 1 章四份 notebook 已於 2026-11-17 在同版 Colab 通過實機驗證，其中 1.3 修正繪圖後端後重跑通過，詳見[第 1 章驗證紀錄](book/validation/colab-ch01-2026-11-17/README.md)。第 2 章六份 notebook 已於 2026-11-19 在同版 Colab 原樣執行通過，詳見[第 2 章驗證紀錄](book/validation/colab-ch02-2026-11-19/README.md)。第 5 章已完成 5.2、5.3、5.4、5.6、5.7；5.5 計算量大，仍在調整，其餘小節陸續補上。遇到問題歡迎開 issue。
+**驗證進度**：全書已有本機 Python 3.12.13 驗證紀錄；Colab 實機驗證持續進行。第 0 章五份 notebook 已於 2026-11-16 在 Colab 2026.07（Python 3.12.13、CPU）重跑通過，共用同一套件環境，詳見[驗證紀錄與保存範圍](book/validation/colab-ch00-2026-11-16/README.md)。第 1 章四份 notebook 已於 2026-11-17 在同版 Colab 通過實機驗證，其中 1.3 修正繪圖後端後重跑通過，詳見[第 1 章驗證紀錄](book/validation/colab-ch01-2026-11-17/README.md)。第 2 章六份 notebook 已於 2026-11-19 在同版 Colab 原樣執行通過，詳見[第 2 章驗證紀錄](book/validation/colab-ch02-2026-11-19/README.md)。第 3 章六份 notebook 已於 2026-11-26 在同版 Colab 通過預設流程驗證，其中 3.2–3.6 修正繪圖後端後重跑通過，詳見[第 3 章驗證紀錄](book/validation/colab-ch03-2026-11-26/README.md)。第 5 章已完成 5.2、5.3、5.4、5.6、5.7；5.5 計算量大，仍在調整，其餘小節陸續補上。遇到問題歡迎開 issue。
 
 - [第 0 章　前言](book/chapters/ch00/index.qmd)
 - [第 1 章　分子怎麼存進電腦](book/chapters/ch01/index.qmd)
@@ -38,6 +38,8 @@
 第 1 章本次完成 1.1–1.4 的 Colab 驗證：12 個程式格、四張圖與 SDF 讀回檢查通過。四份共用同一 CPU 執行階段，其中 1.2 使用獨立套件環境；完整輸出封存檔尚未下載至本機，保存範圍見[驗證紀錄](book/validation/colab-ch01-2026-11-17/README.md)。
 
 第 2 章六份 notebook 已完成 Colab 實機驗證：18 個程式格、六張圖及 2.5、2.6 的分析輸出通過。六份共用一台 CPU VM，使用兩套套件環境；結果與截圖已保存，完整輸出封存檔尚未下載至本機，詳見[驗證紀錄與保存範圍](book/validation/colab-ch02-2026-11-19/README.md)。
+
+第 3 章六份 notebook 已完成 Colab 預設流程驗證：18 個程式格、六張圖通過。3.1 原樣通過，3.2–3.6 修正繪圖後端後重跑通過。五節使用隨附快照，3.4 下載 ESOL；可選即時 API 模式未測試。完整輸出封存檔尚未下載至本機，詳見[驗證紀錄與保存範圍](book/validation/colab-ch03-2026-11-26/README.md)。
 
 ## 授權
 

@@ -1,0 +1,26 @@
+{
+  "03-01-pubchem.ipynb": {
+    "file_sha256": "d595dbcf55d643c7d94c15b1634f94e74622ef85fcc16364da99c0146191df4b",
+    "code_sha256": "32b14d8f177a27f7857ffd5db407d0978d5615da1ab0b0e7ffda7f88840f59e9"
+  },
+  "03-02-chembl.ipynb": {
+    "file_sha256": "d244484bf5e01d9591d4d0497d1a8ced539a0020d76a036a1881629bb3fa6b92",
+    "code_sha256": "11ab5fac11ac2bbbcd9591dbaba4785fc0e25ecde660fe1b339dae8115fcf158"
+  },
+  "03-03-chemical-databases.ipynb": {
+    "file_sha256": "47db61862835d224f22b63400fda8c80eb2e2a2661df0a511e5d1fce808b6ee3",
+    "code_sha256": "08a0a86a0499abba0a20f29248fe6de02c31edcb7da2055932d0e743c462be2e"
+  },
+  "03-04-moleculenet.ipynb": {
+    "file_sha256": "ded54e2346c2d19c544689257e1fb00a22399048104eb186d0fb3a6690821ed0",
+    "code_sha256": "8b1b7baa0a352160711bc68382e35c149397238ca5f3149db50e8662138af69b"
+  },
+  "03-05-data-cleaning.ipynb": {
+    "file_sha256": "fd0e68f600923331eb3bf4a080c56765e28f5ebc6ece956020a03ec98145e6d4",
+    "code_sha256": "da11ff060ee4f2762428d185b6cb17db6cc6321ecc2a1c6f865bb4f1c8254f2b"
+  },
+  "03-06-public-data-bias.ipynb": {
+    "file_sha256": "8318b5d661cd476cc0ed7fb09ee4c40fb2c0e0776f38110b694ce7b4513d49a8",
+    "code_sha256": "da618573588422b5fc61a33d4115bf58fbb1e9183c9a4546bd50d27904351ebe"
+  }
+}
